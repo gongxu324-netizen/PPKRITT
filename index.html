@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP Engagement - GUCCI MILAN FW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softblue: '#7C9DAB',
+                        softpurple: '#A084CA',
+                        softpink: '#E8A0BF',
+                        softyellow: '#F7E398',
+                        softtext: '#3A3845',
+                        subtext: '#82808F',
+                        cream: '#F9F6F0',
+                        cardbg: '#FFFFFF',
+                        cardborder: '#EAE5D9'
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background-color: #F9F6F0; 
+            color: #3A3845; 
+            font-family: system-ui, -apple-system, sans-serif;
+            background-image: radial-gradient(#EAE5D9 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+
+        @keyframes float-reverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(-2deg); }
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .animate-float {
+            animation: float-gentle 4s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float-reverse 5s ease-in-out 1s infinite;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F9F6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D5CFC2;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A084CA;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 relative pb-28 bg-cream overflow-x-hidden selection:bg-softpink/30">
+
+    <!-- Top-Left Floating Decorative Bunny & Cloud -->
+    <div class="fixed top-3 left-3 md:top-6 md:left-8 z-0 pointer-events-none opacity-80 animate-float hidden sm:block">
+        <svg width="100" height="100" viewBox="0 0 120 120" fill="none">
+            <!-- Cloud -->
+            <path d="M20 70 C 10 70, 5 55, 20 45 C 20 30, 40 25, 55 35 C 65 20, 85 25, 90 40 C 105 40, 110 55, 100 70 C 105 85, 85 90, 75 85 C 65 95, 40 95, 30 85 C 15 90, 10 80, 20 70 Z" fill="#FFFFFF" stroke="#EAE5D9" stroke-width="2.5"/>
+            <!-- Bunny in Cloud -->
+            <ellipse cx="60" cy="48" rx="14" ry="16" fill="#FFFFFF" stroke="#3A3845" stroke-width="2"/>
+            <ellipse cx="53" cy="28" rx="4" ry="12" fill="#FFFFFF" stroke="#3A3845" stroke-width="2"/>
+            <ellipse cx="53" cy="28" rx="2" ry="8" fill="#E8A0BF"/>
+            <ellipse cx="67" cy="28" rx="4" ry="12" fill="#FFFFFF" stroke="#3A3845" stroke-width="2"/>
+            <ellipse cx="67" cy="28" rx="2" ry="8" fill="#E8A0BF"/>
+            <!-- Eyes & Blush -->
+            <circle cx="55" cy="48" r="1.5" fill="#3A3845"/>
+            <circle cx="65" cy="48" r="1.5" fill="#3A3845"/>
+            <circle cx="51" cy="52" r="2.5" fill="#E8A0BF" opacity="0.6"/>
+            <circle cx="69" cy="52" r="2.5" fill="#E8A0BF" opacity="0.6"/>
+            <path d="M58 52 Q60 54 62 52" stroke="#3A3845" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <!-- Bottom-Left Decorative Bunny Resting on Pillows -->
+    <div class="fixed bottom-4 left-4 z-0 pointer-events-none opacity-85 animate-float-delayed hidden lg:block">
+        <svg width="130" height="110" viewBox="0 0 130 110" fill="none">
+            <!-- Pillow -->
+            <rect x="20" y="55" width="90" height="40" rx="18" fill="#A084CA" opacity="0.25" stroke="#A084CA" stroke-width="2"/>
+            <circle cx="20" cy="75" r="4" fill="#A084CA"/>
+            <circle cx="110" cy="75" r="4" fill="#A084CA"/>
+            <!-- Sleeping Bunny -->
+            <ellipse cx="65" cy="52" rx="22" ry="18" fill="#FFFFFF" stroke="#3A3845" stroke-width="2"/>
+            <ellipse cx="48" cy="42" rx="10" ry="6" fill="#FFFFFF" stroke="#3A3845" stroke-width="2" transform="rotate(-20 48 42)"/>
+            <ellipse cx="48" cy="42" rx="7" ry="3" fill="#E8A0BF" transform="rotate(-20 48 42)"/>
+            <ellipse cx="80" cy="40" rx="10" ry="6" fill="#FFFFFF" stroke="#3A3845" stroke-width="2" transform="rotate(20 80 40)"/>
+            <ellipse cx="80" cy="40" rx="7" ry="3" fill="#E8A0BF" transform="rotate(20 80 40)"/>
+            <!-- Sleeping Eyes "Zzz" -->
+            <path d="M57 54 Q60 57 63 54" stroke="#3A3845" stroke-width="2" stroke-linecap="round"/>
+            <path d="M67 54 Q70 57 73 54" stroke="#3A3845" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="53" cy="57" r="3" fill="#E8A0BF" opacity="0.6"/>
+            <circle cx="77" cy="57" r="3" fill="#E8A0BF" opacity="0.6"/>
+            <!-- ZZZ Text -->
+            <text x="88" y="32" font-family="sans-serif" font-weight="bold" font-size="12" fill="#A084CA">Z</text>
+            <text x="96" y="22" font-family="sans-serif" font-weight="bold" font-size="10" fill="#A084CA">z</text>
+            <text x="102" y="14" font-family="sans-serif" font-weight="bold" font-size="8" fill="#A084CA">z</text>
+        </svg>
+    </div>
+
+    <!-- Header Section -->
+    <header class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center mb-6 border-b-2 border-dashed border-[#EAE5D9] pb-5 gap-4 relative z-10">
+        <div class="flex items-center gap-3">
+            <!-- Cute Tulip Vector SVG -->
+            <div class="p-2.5 bg-white rounded-2xl shadow-sm border border-cardborder flex items-center justify-center">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 34 V 22" stroke="#7C9DAB" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M20 28 C 12 26, 10 32, 12 34" stroke="#7C9DAB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <path d="M20 26 C 28 24, 30 30, 28 32" stroke="#7C9DAB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <path d="M12 14 C 12 22, 20 24, 20 24 C 20 24, 28 22, 28 14 C 28 10, 24 8, 20 12 C 16 8, 12 10, 12 14 Z" fill="#E8A0BF" stroke="#3A3845" stroke-width="2"/>
+                </svg>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <h1 class="text-2xl sm:text-3xl font-bold tracking-wider text-[#7C9DAB]">PP ENGAGEMENT</h1>
+                    <!-- Ribbon Badge -->
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-[#E8A0BF]/20 text-[#E8A0BF] border border-[#E8A0BF]/40">
+                        🎀 Milan FW
+                    </span>
+                </div>
+                <p class="text-xs sm:text-sm text-[#82808F] font-medium mt-0.5 flex items-center gap-1">
+                    <span>GUCCI MILAN FASHION WEEK</span>
+                    <span class="text-softpurple">✦</span>
+                    <span>FAN BOOSTING HUB</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- BGM Audio Player Control Button -->
+        <div class="flex items-center gap-3">
+            <button id="bgm-btn" onclick="toggleBGM()" class="px-4 py-2.5 bg-white hover:bg-[#7C9DAB]/10 text-xs sm:text-sm font-semibold rounded-2xl border-2 border-[#7C9DAB]/30 text-[#3A3845] flex items-center gap-2.5 transition shadow-sm hover:shadow-md active:scale-95">
+                <span id="bgm-icon" class="text-base">🎵</span>
+                <span id="bgm-text">Play Music</span>
+            </button>
+            <audio id="bgm" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto space-y-8 pr-0 lg:pr-88 relative z-10">
+
+        <!-- Progress Counter Section -->
+        <section class="bg-cardbg p-5 sm:p-6 rounded-3xl border-2 border-cardborder flex flex-col md:flex-row justify-between items-center gap-4 shadow-sm relative overflow-hidden">
+            <!-- Decorative Strawberries Vector -->
+            <div class="absolute -right-2 -bottom-2 opacity-15 pointer-events-none">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 20 C 30 20, 15 35, 25 70 C 30 85, 50 95, 50 95 C 50 95, 70 85, 75 70 C 85 35, 70 20, 50 20 Z" fill="#E8A0BF"/>
+                    <path d="M40 22 C 45 10, 55 10, 60 22 C 55 25, 45 25, 40 22 Z" fill="#7C9DAB"/>
+                </svg>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- Cute Bunny in Tea Cup Icon -->
+                <div class="w-14 h-14 bg-[#F9F6F0] rounded-2xl border-2 border-[#EAE5D9] flex items-center justify-center shrink-0">
+                    <svg width="42" height="42" viewBox="0 0 50 50" fill="none">
+                        <!-- Cup -->
+                        <path d="M10 25 C 10 40, 16 44, 25 44 C 34 44, 40 40, 40 25 Z" fill="#A084CA" opacity="0.3" stroke="#3A3845" stroke-width="1.8"/>
+                        <path d="M40 28 C 46 28, 46 36, 40 38" stroke="#3A3845" stroke-width="1.8" fill="none"/>
+                        <!-- Bunny Ears -->
+                        <ellipse cx="20" cy="14" rx="3.5" ry="9" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
+                        <ellipse cx="20" cy="14" rx="1.8" ry="6" fill="#E8A0BF"/>
+                        <ellipse cx="30" cy="14" rx="3.5" ry="9" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
+                        <ellipse cx="30" cy="14" rx="1.8" ry="6" fill="#E8A0BF"/>
+                        <!-- Bunny Head -->
+                        <circle cx="25" cy="23" r="10" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
+                        <circle cx="21" cy="23" r="1.2" fill="#3A3845"/>
+                        <circle cx="29" cy="23" r="1.2" fill="#3A3845"/>
+                        <circle cx="18" cy="25" r="2" fill="#E8A0BF" opacity="0.6"/>
+                        <circle cx="32" cy="25" r="2" fill="#E8A0BF" opacity="0.6"/>
+                        <path d="M24 25 Q25 26.5 26 25" stroke="#3A3845" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-base sm:text-lg font-bold text-[#3A3845] flex items-center gap-2">
+                        Posts Reviewed (打卡进度)
+                        <span class="text-xs bg-[#F7E398] text-[#3A3845] font-semibold px-2 py-0.5 rounded-full border border-yellow-300">Auto Saved</span>
+                    </h2>
+                    <p class="text-xs text-[#82808F] mt-0.5">点击下方链接跳转打卡，已完成任务会自动保存在浏览器中哦 ~</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end border-t md:border-t-0 border-[#EAE5D9] pt-3 md:pt-0">
+                <div class="flex flex-col text-right">
+                    <span class="text-xs text-[#82808F] font-semibold">Completed</span>
+                    <span id="progress-text" class="text-2xl font-black text-[#A084CA] tracking-wider">0 / 0</span>
+                </div>
+                <button onclick="resetProgress()" class="text-xs bg-[#F9F6F0] hover:bg-red-50 hover:text-red-500 hover:border-red-200 px-3.5 py-2.5 rounded-xl text-[#82808F] border border-[#EAE5D9] font-medium transition flex items-center gap-1.5 active:scale-95 shadow-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    Reset
+                </button>
+            </div>
+        </section>
+
+        <!-- Cute Dashed Divider with Bow -->
+        <div class="flex items-center justify-center my-6 gap-3">
+            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
+            <!-- Bow SVG -->
+            <svg width="28" height="20" viewBox="0 0 30 22" fill="none">
+                <path d="M15 8 C 8 0, 0 4, 3 12 C 6 18, 13 12, 15 10 C 17 12, 24 18, 27 12 C 30 4, 22 0, 15 8 Z" fill="#E8A0BF" stroke="#3A3845" stroke-width="1.5"/>
+                <circle cx="15" cy="10" r="3" fill="#A084CA" stroke="#3A3845" stroke-width="1.5"/>
+            </svg>
+            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
+        </div>
+
+        <!-- PP KRIT IG Section -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-cardborder shadow-sm">
+                    <span class="w-3 h-3 rounded-full bg-[#7C9DAB] inline-block animate-pulse-slow"></span> 
+                    <span>PP KRIT OFFICIAL IG</span>
+                    <span class="text-xs text-[#82808F] font-normal font-sans">(Brand & Personal)</span>
+                </h3>
+                <span class="text-xs text-[#82808F]">🍓 Official Channel</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="brand-posts">
+                <!-- Javascript dynamic injection -->
+            </div>
+        </section>
+
+        <!-- Cute Dashed Divider with Heart -->
+        <div class="flex items-center justify-center my-6 gap-3">
+            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#A084CA" stroke="#3A3845" stroke-width="1.5"/>
+            </svg>
+            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
+        </div>
+
+        <!-- Media & KOL Section -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-cardborder shadow-sm">
+                    <span class="w-3 h-3 rounded-full bg-[#A084CA] inline-block animate-pulse-slow"></span> 
+                    <span>Media & KOL (Instagram)</span>
+                </h3>
+                <span class="text-xs text-[#82808F]">🎀 High Priority Engagement</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="media-posts">
+                <!-- Javascript dynamic injection -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Captions Box (Widget on top-right for Desktop, Fixed Bottom/Floating) -->
+    <aside id="caption-widget" class="fixed top-4 right-4 sm:top-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-80 bg-white/95 backdrop-blur-md border-2 border-[#7C9DAB]/40 rounded-3xl p-4 shadow-xl z-50 transition-all duration-300">
+        <!-- Floating Sticker Decoration on Card Top -->
+        <div class="absolute -top-3 left-6 bg-[#F7E398] border border-yellow-300 text-[#3A3845] text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
+            <span>✨ Comment Helper</span>
+        </div>
+
+        <div class="flex justify-between items-center mb-3 pt-1">
+            <div class="flex items-center gap-1.5 text-xs font-bold text-[#3A3845]">
+                <span class="text-[#A084CA] text-sm">🐇</span> GUCCI Milan FW Captions
+            </div>
+            <button onclick="toggleCaptionWidget()" class="text-[#82808F] hover:text-[#3A3845] bg-[#F9F6F0] hover:bg-[#EAE5D9] w-6 h-6 rounded-full flex items-center justify-center text-xs transition">✕</button>
+        </div>
+
+        <!-- Platform Tabs (IG / X) -->
+        <div class="flex gap-1 mb-3 bg-[#F9F6F0] p-1 rounded-2xl border border-cardborder">
+            <button id="tab-ig" onclick="switchPlatform('IG')" class="flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1">
+                <span>📷</span> IG
+            </button>
+            <button id="tab-x" onclick="switchPlatform('X')" class="flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1">
+                <span>🐦</span> X
+            </button>
+        </div>
+
+        <!-- With Hashtag Toggle Switch -->
+        <div class="flex justify-between items-center mb-3 text-xs text-[#3A3845] bg-[#F9F6F0] p-2.5 rounded-2xl border border-cardborder">
+            <span class="flex items-center gap-1.5 font-medium">
+                <span class="text-[#E8A0BF]">🏷️</span> Include Hashtags
+            </span>
+            <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="hashtag-toggle" checked onchange="updateCaptionDisplay()" class="sr-only peer">
+                <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#7C9DAB]"></div>
+            </label>
+        </div>
+
+        <!-- Dynamic Caption Output Box -->
+        <div class="bg-[#F9F6F0] border border-cardborder rounded-2xl p-3.5 mb-3 text-xs text-[#3A3845] leading-relaxed min-h-[100px] max-h-[160px] overflow-y-auto flex items-center justify-center text-left relative group selection:bg-[#E8A0BF]/30" id="caption-box">
+            加载中...
+        </div>
+
+        <!-- Bottom Action Controls -->
+        <div class="flex gap-2">
+            <button onclick="generateRandomCaption()" class="flex-1 bg-white hover:bg-[#7C9DAB]/10 text-[#3A3845] border-2 border-[#7C9DAB]/40 py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95">
+                <span>🔀</span> Random
+            </button>
+            <button onclick="copyCaption()" class="flex-1 bg-[#A084CA] hover:bg-[#8e72b8] text-white py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md active:scale-95">
+                <span>📋</span> Copy
+            </button>
+        </div>
+        
+        <!-- Toast Notification -->
+        <div id="toast" class="hidden mt-2 text-center text-xs text-[#7C9DAB] font-bold bg-[#7C9DAB]/10 py-1.5 rounded-xl border border-[#7C9DAB]/30 animate-pulse">
+            ✨ Copied to Clipboard!
+        </div>
+    </aside>
+
+    <!-- Floating Restore Widget Button (shown when widget minimized) -->
+    <button id="restore-caption-btn" onclick="toggleCaptionWidget()" class="hidden fixed bottom-6 right-6 bg-[#7C9DAB] hover:bg-[#6b8c9a] text-white text-xs font-bold px-4 py-3 rounded-full shadow-lg transition-all z-40 flex items-center gap-2 border-2 border-white animate-bounce">
+        <span>💬</span>
+        <span>Open Captions</span>
+    </button>
+
+    <script>
+        // 1. Post Links Data
+        const postsData = {
+            brand: [
+                { id: "pp1", name: "PP Krit Post 1 (Milan Look)", link: "https://www.instagram.com/p/DdfnlYIgV7S/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" },
+                { id: "pp2", name: "PP Krit Reel 2 (GUCCI Show)", link: "https://www.instagram.com/reel/DdbfPrqiyjN/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" }
+            ],
+            media: [
+                { id: "m1", name: "Media Highlight Post 1", link: "https://www.instagram.com/p/DdiJR6fk2HM/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" },
+                { id: "m2", name: "Media Highlight Post 2", link: "https://www.instagram.com/p/DcvuiRbk30l/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" },
+                { id: "m3", name: "Media Highlight Post 3", link: "https://www.instagram.com/p/Dddazn_zacH/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" },
+                { id: "m4", name: "Media Highlight Post 4", link: "https://www.instagram.com/p/DdiVUJRGqlR/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" },
+                { id: "m5", name: "Media Highlight Post 5", link: "https://www.instagram.com/p/Ddbt7K4k1b4/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" }
+            ]
+        };
+
+        // 2. Hashtags
+        const targetHashtags = "#GUCCIxPPKRIT #Gucci #PPKritt";
+
+        // 3. Template phrases for adorable auto caption generation
+        const captionTemplates = {
+            openings: [
+                "Absolute perfection! 💖",
+                "The style, the elegance! ✨",
+                "So proud of our boy 🌷",
+                "Can't take my eyes off 🎀",
+                "Pure luxury and magic! 💫",
+                "An absolute masterpiece! 🎨",
+                "Serving pure visual excellence! 🌟"
+            ],
+            subjects: [
+                "PP Krit at GUCCI Milan FW",
+                "PP Krit in Milan",
+                "PP Krit for GUCCI",
+                "PP Krit's incredible look"
+            ],
+            praises: [
+                "is completely stunning! 💖",
+                "is purely iconic! 🔥",
+                "looks so handsome and classy! ✨",
+                "is unmatched in every way! 🌹",
+                "shines brighter than ever! 💫"
+            ]
+        };
+
+        let currentRawText = "";
+        let currentPlatform = "IG";
+
+        // Initialize Application
+        window.onload = function() {
+            renderPosts();
+            updateProgress();
+            generateRandomCaption();
+        };
+
+        // Random Caption Generator
+        function generateRandomCaption() {
+            const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+            const opening = rand(captionTemplates.openings);
+            const subject = rand(captionTemplates.subjects);
+            const praise = rand(captionTemplates.praises);
+
+            currentRawText = `${opening} ${subject} ${praise}`;
+            updateCaptionDisplay();
+        }
+
+        // Refresh Caption Display Area
+        function updateCaptionDisplay() {
+            const hashtagCheckbox = document.getElementById('hashtag-toggle');
+            const withHashtag = hashtagCheckbox ? hashtagCheckbox.checked : true;
+            let finalText = currentRawText;
+
+            if (withHashtag) {
+                finalText += "\n\n" + targetHashtags;
+            }
+
+            const captionBox = document.getElementById('caption-box');
+            if (captionBox) {
+                captionBox.innerText = finalText;
+            }
+        }
+
+        // Copy Caption to Clipboard with Toast
+        function copyCaption() {
+            const captionBox = document.getElementById('caption-box');
+            if (!captionBox) return;
+
+            const textToCopy = captionBox.innerText;
+
+            // ExecCommand Fallback for iframe restriction safety
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(textToCopy).then(showToast);
+                }
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            if (toast) {
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 2200);
+            }
+        }
+
+        // SVG Strawberry Decoration for Completed Items
+        const strawberrySVG = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="inline-block">
+                <path d="M12 4 C6 4, 3 8, 5 16 C 7 21, 12 23, 12 23 C 12 23, 17 21, 19 16 C 21 8, 18 4, 12 4 Z" fill="#E8A0BF"/>
+                <path d="M9 5 C 11 2, 13 2, 15 5 C 13 6, 11 6, 9 5 Z" fill="#7C9DAB"/>
+                <circle cx="9" cy="10" r="0.8" fill="#FFFFFF"/>
+                <circle cx="15" cy="10" r="0.8" fill="#FFFFFF"/>
+                <circle cx="12" cy="14" r="0.8" fill="#FFFFFF"/>
+            </svg>
+        `;
+
+        // Render Posts Cards
+        function renderPosts() {
+            const completed = getCompletedPosts();
+            
+            const renderList = (data, containerId, accentColor) => {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+                
+                container.innerHTML = data.map(post => {
+                    const isDone = completed.includes(post.id);
+                    return `
+                        <div class="bg-cardbg border-2 ${isDone ? 'border-[#7C9DAB] bg-[#7C9DAB]/5' : 'border-cardborder'} p-4 rounded-2xl flex justify-between items-center transition-all hover:shadow-md group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="text-xs font-bold px-3 py-1.5 rounded-xl transition flex items-center gap-1 ${isDone ? 'bg-[#7C9DAB] text-white shadow-sm' : 'bg-[#A084CA] text-white'}">
+                                    ${isDone ? 'DONE ✓' : 'BOOST!'}
+                                </span>
+                                <span class="text-sm font-bold text-[#3A3845] truncate group-hover:text-[#7C9DAB] transition">${post.name}</span>
+                            </div>
+                            <a href="${post.link}" target="_blank" rel="noopener noreferrer" onclick="markPostDone('${post.id}')" class="ml-2 text-xs bg-[#F9F6F0] hover:bg-[#7C9DAB] hover:text-white text-[#82808F] p-2.5 rounded-xl border border-cardborder transition flex items-center justify-center shrink-0 shadow-sm active:scale-90" title="Open Post">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                    `;
+                }).join('');
+            };
+
+            renderList(postsData.brand, 'brand-posts', '#7C9DAB');
+            renderList(postsData.media, 'media-posts', '#A084CA');
+        }
+
+        function getCompletedPosts() {
+            try {
+                return JSON.parse(localStorage.getItem('completed_posts') || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function markPostDone(postId) {
+            let completed = getCompletedPosts();
+            if (!completed.includes(postId)) {
+                completed.push(postId);
+                localStorage.setItem('completed_posts', JSON.stringify(completed));
+                setTimeout(() => {
+                    renderPosts();
+                    updateProgress();
+                }, 300);
+            }
+        }
+
+        function resetProgress() {
+            if (confirm("确定要重置打卡进度吗？(Reset your progress?)")) {
+                localStorage.removeItem('completed_posts');
+                renderPosts();
+                updateProgress();
+            }
+        }
+
+        function updateProgress() {
+            const completed = getCompletedPosts();
+            const total = postsData.brand.length + postsData.media.length;
+            const el = document.getElementById('progress-text');
+            if (el) {
+                el.innerText = completed.length + " / " + total;
+            }
+        }
+
+        function toggleCaptionWidget() {
+            const widget = document.getElementById('caption-widget');
+            const restoreBtn = document.getElementById('restore-caption-btn');
+            if (widget && restoreBtn) {
+                const isHidden = widget.classList.contains('hidden');
+                if (isHidden) {
+                    widget.classList.remove('hidden');
+                    restoreBtn.classList.add('hidden');
+                } else {
+                    widget.classList.add('hidden');
+                    restoreBtn.classList.remove('hidden');
+                }
+            }
+        }
+
+        function switchPlatform(platform) {
+            currentPlatform = platform;
+            const tabIG = document.getElementById('tab-ig');
+            const tabX = document.getElementById('tab-x');
+            if (!tabIG || !tabX) return;
+            
+            if (platform === 'IG') {
+                tabIG.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
+                tabX.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
+            } else {
+                tabX.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
+                tabIG.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
+            }
+            generateRandomCaption();
+        }
+
+        function toggleBGM() {
+            const audio = document.getElementById('bgm');
+            const btnText = document.getElementById('bgm-text');
+            const btnIcon = document.getElementById('bgm-icon');
+            const btn = document.getElementById('bgm-btn');
+            if (!audio || !btnText || !btnIcon) return;
+            
+            if (audio.paused) {
+                audio.play();
+                btnText.innerText = 'Pause Music';
+                btnIcon.innerText = '⏸️';
+                btn.classList.add('border-[#7C9DAB]', 'bg-[#7C9DAB]/10');
+            } else {
+                audio.pause();
+                btnText.innerText = 'Play Music';
+                btnIcon.innerText = '🎵';
+                btn.classList.remove('border-[#7C9DAB]', 'bg-[#7C9DAB]/10');
+            }
+        }
+    </script>
+</body>
+</html>
