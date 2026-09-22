@@ -390,92 +390,80 @@
                 { id: "tk1", name: "PP Krit x GUCCI TikTok", link: "https://vt.tiktok.com/ZSqKmbs8Y/" }
             ],
             x_posts: [
-               
-                
-                
-                
-              { id: "x001",name:"PPENT POST1", link: "https://x.com/ppkrit_ent/status/2102383667868016898?s=46" },
-              { id: "x002",name:"PPENT POST2", link: "https://x.com/ppkrit_ent/status/2102383721496375539?s=46" },
-              { id: "x003",name:"PPENT POST3", link: "https://x.com/ppkrit_ent/status/2102383766438367376?s=46" },
-              { id: "x004",name:"PPENT POST4", link: "https://x.com/ppkrit_ent/status/2102383827708756147?s=46" },
-              { id: "x005",name:"PPENT POST5", link: "https://x.com/ppkrit_ent/status/2102383863414890973?s=46" },
-              { id: "x006",name:"PPENT POST6", link: "https://x.com/ppkrit_ent/status/2102383902912655788?s=46" },
-              { id: "x007",name:"PPENT POST7", link: "https://x.com/ppkrit_ent/status/2102383940581614076?s=46" }
+                { id: "x001", name: "PPENT POST1", link: "https://x.com/ppkrit_ent/status/2102383667868016898?s=46" },
+                { id: "x002", name: "PPENT POST2", link: "https://x.com/ppkrit_ent/status/2102383721496375539?s=46" },
+                { id: "x003", name: "PPENT POST3", link: "https://x.com/ppkrit_ent/status/2102383766438367376?s=46" },
+                { id: "x004", name: "PPENT POST4", link: "https://x.com/ppkrit_ent/status/2102383827708756147?s=46" },
+                { id: "x005", name: "PPENT POST5", link: "https://x.com/ppkrit_ent/status/2102383863414890973?s=46" },
+                { id: "x006", name: "PPENT POST6", link: "https://x.com/ppkrit_ent/status/2102383902912655788?s=46" },
+                { id: "x007", name: "PPENT POST7", link: "https://x.com/ppkrit_ent/status/2102383940581614076?s=46" }
             ]
         };
 
         // 2. Hashtags
-        const targetHashtags = "PPKRITXGUCCIMFW2
-            6#GUCCISS27xPPKRIT
-            #GucciTheStoreShow
-            #PPKritt@ppkritt
-                #Gucci@gucci";
+        const targetHashtags = "#PPKRITXGUCCIMFW26 #GUCCISS27xPPKRIT #GucciTheStoreShow #PPKritt @ppkritt #Gucci @gucci";
 
         // 3. 评论词库
-      // 多结构词库：已严格移除 Global，统一使用 Brand Ambassador / BA
-const captionTemplates = {
-    // 短句库 (Short Captions) - 8种
-    shorts: [
-        "PPKRIT x GUCCI is pure magic! ✨",
-        "The ultimate GUCCI Brand Ambassador, PPKRIT! 💖",
-        "PPKRIT owned Milan Fashion Week! 🔥",
-        "Demna and PPKRIT, what an iconic duo! 💫",
-        "So proud of PPKRIT for GUCCI! 🌹",
-        "PPKRIT is the main event! 👑",
-        "Absolute perfection from PPKRIT in GUCCI! 🎨",
-        "Fashion icon PPKRIT shines again! 🌟"
-    ],
+        const captionTemplates = {
+            shorts: [
+                "PPKRIT x GUCCI is pure magic! ✨",
+                "The ultimate GUCCI Brand Ambassador, PPKRIT! 💖",
+                "PPKRIT owned Milan Fashion Week! 🔥",
+                "Demna and PPKRIT, what an iconic duo! 💫",
+                "So proud of PPKRIT for GUCCI! 🌹",
+                "PPKRIT is the main event! 👑",
+                "Absolute perfection from PPKRIT in GUCCI! 🎨",
+                "Fashion icon PPKRIT shines again! 🌟"
+            ],
 
-    // 中句模块 (Medium Captions)
-    m_openings: [
-        "Absolute perfection! 💖",
-        "Can't get over this look! ✨",
-        "So proud of our boy 🌷",
-        "Pure luxury and style! 💫",
-        "Serving pure visual excellence! 🌟"
-    ],
-    m_bodies: [
-        "PPKRIT as GUCCI Brand Ambassador delivers unmatched high fashion energy",
-        "PP Krit representing GUCCI in Milan completely stole the show",
-        "PPKRIT's bond with Demna and the GUCCI family is so beautiful",
-        "PPKRIT proves his incredible influence in the fashion world again",
-        "The connection between PPKRIT and Demna is truly iconic"
-    ],
-    m_closings: [
-        "Nobody does it like him! 🔥",
-        "Always proud of you! ✨",
-        "Forever supporting PPKRIT! 💖",
-        "Keep shining fashion icon! 🌟",
-        "So well deserved! 🌸"
-    ],
+            m_openings: [
+                "Absolute perfection! 💖",
+                "Can't get over this look! ✨",
+                "So proud of our boy 🌷",
+                "Pure luxury and style! 💫",
+                "Serving pure visual excellence! 🌟"
+            ],
+            m_bodies: [
+                "PPKRIT as GUCCI Brand Ambassador delivers unmatched high fashion energy",
+                "PP Krit representing GUCCI in Milan completely stole the show",
+                "PPKRIT's bond with Demna and the GUCCI family is so beautiful",
+                "PPKRIT proves his incredible influence in the fashion world again",
+                "The connection between PPKRIT and Demna is truly iconic"
+            ],
+            m_closings: [
+                "Nobody does it like him! 🔥",
+                "Always proud of you! ✨",
+                "Forever supporting PPKRIT! 💖",
+                "Keep shining fashion icon! 🌟",
+                "So well deserved! 🌸"
+            ],
 
-    // 长句模块 (Long Captions)
-    l_openings: [
-        "An absolute fashion masterpiece! 🎨",
-        "The style and elegance are completely unmatched! ✨",
-        "Iconic moment that will go down in fashion history! 🔥"
-    ],
-    l_identities: [
-        "PPKRIT shining so bright as GUCCI's Brand Ambassador",
-        "PP Krit commanding the fashion stage for GUCCI"
-    ],
-    l_relations: [
-        "with his special bond and mutual respect with Demna,",
-        "surrounded by love from Demna and the GUCCI team,"
-    ],
-    l_performances: [
-        "he effortlessly proves his status as a true fashion powerhouse.",
-        "he delivers pure perfection and redefines modern luxury."
-    ],
-    l_feelings: [
-        "Every single detail of this look is breathtaking.",
-        "Truly born to be a superstar in the high fashion world."
-    ],
-    l_closings: [
-        "Love you so much, keep shining! 💕",
-        "Can't wait to see what comes next! 🚀"
-    ]
-};
+            l_openings: [
+                "An absolute fashion masterpiece! 🎨",
+                "The style and elegance are completely unmatched! ✨",
+                "Iconic moment that will go down in fashion history! 🔥"
+            ],
+            l_identities: [
+                "PPKRIT shining so bright as GUCCI's Brand Ambassador",
+                "PP Krit commanding the fashion stage for GUCCI"
+            ],
+            l_relations: [
+                "with his special bond and mutual respect with Demna,",
+                "surrounded by love from Demna and the GUCCI team,"
+            ],
+            l_performances: [
+                "he effortlessly proves his status as a true fashion powerhouse.",
+                "he delivers pure perfection and redefines modern luxury."
+            ],
+            l_feelings: [
+                "Every single detail of this look is breathtaking.",
+                "Truly born to be a superstar in the high fashion world."
+            ],
+            l_closings: [
+                "Love you so much, keep shining! 💕",
+                "Can't wait to see what comes next! 🚀"
+            ]
+        };
 
         let currentRawText = "";
         let currentPlatform = "IGTT";
@@ -487,36 +475,34 @@ const captionTemplates = {
             switchPlatform('IGTT');
         };
 
-   function generateRandomCaption() {
-    const rand = arr => arr[Math.floor(Math.random() * arr.length)];
-    const typeChance = Math.random();
-    let result = "";
+        function generateRandomCaption() {
+            const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+            const typeChance = Math.random();
+            let result = "";
 
-    if (typeChance < 0.3) {
-        // 短句 Mode
-        result = rand(captionTemplates.shorts);
+            if (typeChance < 0.3) {
+                // 短句 Mode
+                result = rand(captionTemplates.shorts);
+            } else if (typeChance < 0.7) {
+                // 中句 Mode
+                const open = rand(captionTemplates.m_openings);
+                const body = rand(captionTemplates.m_bodies);
+                const close = rand(captionTemplates.m_closings);
+                result = `${open} ${body}. ${close}`;
+            } else {
+                // 长句 Mode
+                const open = rand(captionTemplates.l_openings);
+                const id = rand(captionTemplates.l_identities);
+                const rel = rand(captionTemplates.l_relations);
+                const perf = rand(captionTemplates.l_performances);
+                const feel = rand(captionTemplates.l_feelings);
+                const close = rand(captionTemplates.l_closings);
+                result = `${open} ${id}, ${rel} ${perf} ${feel} ${close}`;
+            }
 
-    } else if (typeChance < 0.7) {
-        // 中句 Mode
-        const open = rand(captionTemplates.m_openings);
-        const body = rand(captionTemplates.m_bodies);
-        const close = rand(captionTemplates.m_closings);
-        result = `${open} ${body}. ${close}`;
-
-    } else {
-        // 长句 Mode
-        const open = rand(captionTemplates.l_openings);
-        const id = rand(captionTemplates.l_identities);
-        const rel = rand(captionTemplates.l_relations);
-        const perf = rand(captionTemplates.l_performances);
-        const feel = rand(captionTemplates.l_feelings);
-        const close = rand(captionTemplates.l_closings);
-        result = `${open} ${id}, ${rel} ${perf} ${feel} ${close}`;
-    }
-
-    currentRawText = result;
-    updateCaptionDisplay();
-}
+            currentRawText = result;
+            updateCaptionDisplay();
+        }
 
         function updateCaptionDisplay() {
             const hashtagCheckbox = document.getElementById('hashtag-toggle');
@@ -599,7 +585,6 @@ const captionTemplates = {
                 }).join('');
             };
 
-            // 传入第三个参数 isIgSection 为 true 开启 IG 板块的数量显示
             renderList(postsData.brand, 'brand-posts', true);
             renderList(postsData.media, 'media-posts', true);
             renderList(postsData.tiktok_posts, 'tiktok-posts', false);
