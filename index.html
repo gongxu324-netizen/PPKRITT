@@ -272,6 +272,27 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="media-posts"></div>
         </section>
 
+        <!-- Cute Dashed Divider with Star -->
+        <div class="flex items-center justify-center my-6 gap-3">
+            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#F7E398" stroke="#3A3845" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
+        </div>
+
+        <!-- TIKTOK Section (已移至 X 上方) -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-cardborder shadow-sm">
+                    <span class="w-3 h-3 rounded-full bg-[#E8A0BF] inline-block animate-pulse-slow"></span> 
+                    <span>TIKTOK</span>
+                </h3>
+                <span class="text-xs text-[#82808F]">🎵 Viral Videos</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="tiktok-posts"></div>
+        </section>
+
         <!-- Cute Dashed Divider with Flower -->
         <div class="flex items-center justify-center my-6 gap-3">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
@@ -294,27 +315,6 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="x-posts"></div>
         </section>
 
-        <!-- Cute Dashed Divider with Star -->
-        <div class="flex items-center justify-center my-6 gap-3">
-            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#F7E398" stroke="#3A3845" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg>
-            <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
-        </div>
-
-        <!-- TIKTOK Section -->
-        <section class="space-y-4">
-            <div class="flex items-center justify-between">
-                <h3 class="text-sm font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-3 h-3 rounded-full bg-[#E8A0BF] inline-block animate-pulse-slow"></span> 
-                    <span>TIKTOK</span>
-                </h3>
-                <span class="text-xs text-[#82808F]">🎵 Viral Videos</span>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="tiktok-posts"></div>
-        </section>
-
     </main>
 
     <!-- Floating Captions Box -->
@@ -330,13 +330,13 @@
             <button onclick="toggleCaptionWidget()" class="text-[#82808F] hover:text-[#3A3845] bg-[#F9F6F0] hover:bg-[#EAE5D9] w-6 h-6 rounded-full flex items-center justify-center text-xs transition">✕</button>
         </div>
 
-        <!-- Platform Tabs (IG / X) -->
+        <!-- Platform Tabs (IG/TT & X) -->
         <div class="flex gap-1 mb-3 bg-[#F9F6F0] p-1 rounded-2xl border border-cardborder">
-            <button id="tab-ig" onclick="switchPlatform('IG')" class="flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1">
-                <span>📷</span> IG
+            <button id="tab-igtt" onclick="switchPlatform('IGTT')" class="flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1">
+                <span>📷/🎵</span> IG / TT
             </button>
             <button id="tab-x" onclick="switchPlatform('X')" class="flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1">
-                <span>🐦</span> X/TT
+                <span>🐦</span> X
             </button>
         </div>
 
@@ -392,14 +392,14 @@
                 { id: "m4", name: "Media Highlight Post 4", link: "https://www.instagram.com/p/DdiVUJRGqlR/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" },
                 { id: "m5", name: "Media Highlight Post 5", link: "https://www.instagram.com/p/Ddbt7K4k1b4/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" }
             ],
+            tiktok_posts: [
+                { id: "tk1", name: "PP Krit x GUCCI TikTok", link: "https://vt.tiktok.com/ZSqKmbs8Y/" }
+            ],
             x_posts: [
                 { id: "x1", name: "GUCCI Official Update", link: "https://x.com/gucci/status/2100936567695298831?s=20" },
                 { id: "x2", name: "PPKrit_Ent Post 1", link: "https://x.com/PPKrit_Ent/status/2100934838262046794?s=20" },
                 { id: "x3", name: "PPKrit_Ent Post 2", link: "https://x.com/PPKrit_Ent/status/2101853923577409585?s=20" },
                 { id: "x4", name: "PPKrit_Ent Post 3", link: "https://x.com/PPKrit_Ent/status/2100937023939105264?s=20" }
-            ],
-            tiktok_posts: [
-                { id: "tk1", name: "PP Krit x GUCCI TikTok", link: "https://vt.tiktok.com/ZSqKmbs8Y/" }
             ]
         };
 
@@ -433,13 +433,13 @@
         };
 
         let currentRawText = "";
-        let currentPlatform = "IG";
+        let currentPlatform = "IGTT";
 
         // Initialize Application
         window.onload = function() {
             renderPosts();
             updateProgress();
-            switchPlatform('IG');
+            switchPlatform('IGTT');
         };
 
         // 强校验随机评论生成逻辑
@@ -537,8 +537,8 @@
 
             renderList(postsData.brand, 'brand-posts');
             renderList(postsData.media, 'media-posts');
-            renderList(postsData.x_posts, 'x-posts');
             renderList(postsData.tiktok_posts, 'tiktok-posts');
+            renderList(postsData.x_posts, 'x-posts');
         }
 
         function getCompletedPosts() {
@@ -595,18 +595,18 @@
 
         function switchPlatform(platform) {
             currentPlatform = platform;
-            const tabIG = document.getElementById('tab-ig');
+            const tabIGTT = document.getElementById('tab-igtt');
             const tabX = document.getElementById('tab-x');
             const hashtagCheckbox = document.getElementById('hashtag-toggle');
-            if (!tabIG || !tabX) return;
+            if (!tabIGTT || !tabX) return;
             
-            if (platform === 'IG') {
-                tabIG.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
+            if (platform === 'IGTT') {
+                tabIGTT.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
                 tabX.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
                 if (hashtagCheckbox) hashtagCheckbox.checked = false;
             } else {
                 tabX.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
-                tabIG.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
+                tabIGTT.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
                 if (hashtagCheckbox) hashtagCheckbox.checked = true;
             }
             generateRandomCaption();
