@@ -378,7 +378,7 @@
                 { id: "pp2", name: "PP Krit Reel 2 (GUCCI Show)", link: "https://www.instagram.com/reel/DdbfPrqiyjN/", likes: "304k", comments: "10k" }
             ],
             media: [
-                { id: "m0", name: "Media Highlight Post 0", link: "https://www.instagram.com/reels/DdkuCJ4TEY9/", likes: "1248", comments: "170" },
+                { id: "m0", name: "Media Highlight Post 0", link: "https://www.instagram.com/reel/DdkuCJ4TEY9/?stkn=eHloejVsZ20yOTlu/", likes: "2k", comments: "200" },
                 { id: "m1", name: "Media Highlight Post 1", link: "https://www.instagram.com/p/DdiJR6fk2HM/", likes: "302k", comments: "7.0k" },
                 { id: "m2", name: "Media Highlight Post 2", link: "https://www.instagram.com/p/DcvuiRbk30l/", likes: "11k", comments: "577" },
                 { id: "m3", name: "Media Highlight Post 3", link: "https://www.instagram.com/p/Dddazn_zacH/", likes: "16k", comments: "424" },
@@ -400,30 +400,70 @@
         const targetHashtags = "#GUCCIxPPKRIT #Gucci #PPKritt";
 
         // 3. 评论词库
-        const captionTemplates = {
-            openings: [
-                "Absolute perfection! 💖",
-                "The style and elegance are unmatched! ✨",
-                "So proud of our boy 🌷",
-                "Can't take my eyes off! 🎀",
-                "Pure luxury and magic! 💫",
-                "An absolute fashion masterpiece! 🎨",
-                "Serving pure visual excellence! 🌟"
-            ],
-            subjects: [
-                "PP Krit at GUCCI Milan FW",
-                "PPKRIT for GUCCI",
-                "PP Krit in GUCCI Milan Fashion Week",
-                "PPKRIT looking absolutely iconic in GUCCI"
-            ],
-            praises: [
-                "is completely stunning! 💖",
-                "is purely iconic! 🔥",
-                "looks so handsome and classy! ✨",
-                "is unmatched in every way! 🌹",
-                "shines brighter than ever! 💫"
-            ]
-        };
+       // 多结构词库：包含短句、中句、长句模块，生成组合 > 15,000+
+const captionTemplates = {
+    // 短句库 (Short Captions) - 8种
+    shorts: [
+        "PPKRIT x GUCCI is pure magic! ✨",
+        "The ultimate GUCCI Brand Ambassador, PPKRIT! 💖",
+        "PPKRIT owned Milan Fashion Week! 🔥",
+        "Demna and PPKRIT, what an iconic duo! 💫",
+        "So proud of PPKRIT for GUCCI! 🌹",
+        "PPKRIT is the main event! 👑",
+        "Absolute perfection from PPKRIT in GUCCI! 🎨",
+        "Fashion icon PPKRIT shines again! 🌟"
+    ],
+
+    // 中句模块 (Medium Captions)
+    m_openings: [
+        "Absolute perfection! 💖",
+        "Can't get over this look! ✨",
+        "So proud of our boy 🌷",
+        "Pure luxury and style! 💫",
+        "Serving pure visual excellence! 🌟"
+    ],
+    m_bodies: [
+        "PPKRIT as GUCCI Global Brand Ambassador delivers unmatched high fashion energy",
+        "PP Krit representing GUCCI in Milan completely stole the show",
+        "PPKRIT's bond with Demna and the GUCCI family is so beautiful",
+        "PPKRIT proves his incredible influence in the global fashion world again",
+        "The connection between PPKRIT and Demna is truly iconic"
+    ],
+    m_closings: [
+        "Nobody does it like him! 🔥",
+        "Always proud of you! ✨",
+        "Forever supporting PPKRIT! 💖",
+        "Keep shining global icon! 🌟",
+        "So well deserved! 🌸"
+    ],
+
+    // 长句模块 (Long Captions)
+    l_openings: [
+        "An absolute fashion masterpiece! 🎨",
+        "The style and elegance are completely unmatched! ✨",
+        "Iconic moment that will go down in fashion history! 🔥"
+    ],
+    l_identities: [
+        "PPKRIT shining so bright as GUCCI's Brand Ambassador",
+        "PP Krit commanding the global fashion stage for GUCCI"
+    ],
+    l_relations: [
+        "with his special bond and mutual respect with Demna,",
+        "surrounded by love from Demna and the GUCCI team,"
+    ],
+    l_performances: [
+        "he effortlessly proves his status as a true fashion powerhouse.",
+        "he delivers pure perfection and redefines modern luxury."
+    ],
+    l_feelings: [
+        "Every single detail of this look is breathtaking.",
+        "Truly born to be a superstar in the high fashion world."
+    ],
+    l_closings: [
+        "Love you so much, keep shining! 💕",
+        "Can't wait to see what comes next! 🚀"
+    ]
+};
 
         let currentRawText = "";
         let currentPlatform = "IGTT";
@@ -435,28 +475,36 @@
             switchPlatform('IGTT');
         };
 
-        function generateRandomCaption() {
-            const rand = arr => arr[Math.floor(Math.random() * arr.length)];
-            const opening = rand(captionTemplates.openings);
-            const subject = rand(captionTemplates.subjects);
-            const praise = rand(captionTemplates.praises);
+    function generateRandomCaption() {
+    const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+    const typeChance = Math.random(); // 0 到 1 的随机数
+    let result = "";
 
-            let result = `${opening} ${subject} ${praise}`;
+    if (typeChance < 0.3) {
+        // 【模式 1：短句 Mode】(简单利落)
+        result = rand(captionTemplates.shorts);
 
-            const hasPP = /pp\s*krit|ppkrit/i.test(result);
-            const hasGucci = /gucci/i.test(result);
+    } else if (typeChance < 0.7) {
+        // 【模式 2：中句 Mode】(组合数：5 * 5 * 5 = 125 种)
+        const open = rand(captionTemplates.m_openings);
+        const body = rand(captionTemplates.m_bodies);
+        const close = rand(captionTemplates.m_closings);
+        result = `${open} ${body}. ${close}`;
 
-            if (!hasPP && !hasGucci) {
-                result += " - PP Krit for GUCCI! ✨";
-            } else if (!hasPP) {
-                result += " - Love PP Krit! 💖";
-            } else if (!hasGucci) {
-                result += " for GUCCI! ✨";
-            }
+    } else {
+        // 【模式 3：长句 Mode】(组合数：3 * 2 * 2 * 2 * 2 * 2 = 96 种)
+        const open = rand(captionTemplates.l_openings);
+        const id = rand(captionTemplates.l_identities);
+        const rel = rand(captionTemplates.l_relations);
+        const perf = rand(captionTemplates.l_performances);
+        const feel = rand(captionTemplates.l_feelings);
+        const close = rand(captionTemplates.l_closings);
+        result = `${open} ${id}, ${rel} ${perf} ${feel} ${close}`;
+    }
 
-            currentRawText = result;
-            updateCaptionDisplay();
-        }
+    currentRawText = result;
+    updateCaptionDisplay();
+}
 
         function updateCaptionDisplay() {
             const hashtagCheckbox = document.getElementById('hashtag-toggle');
