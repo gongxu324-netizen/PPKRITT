@@ -150,9 +150,7 @@
             </div>
             <div>
                 <div class="flex items-center gap-2">
-                    <!-- Cute Cartoon Font Applied Here -->
                     <h1 class="text-2xl sm:text-3xl font-cute-title font-bold tracking-wider text-[#7C9DAB]">PP ENGAGEMENT</h1>
-                    <!-- Ribbon Badge -->
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#E8A0BF]/20 text-[#E8A0BF] border border-[#E8A0BF]/40">
                         🎀 Milan FW
                     </span>
@@ -170,7 +168,6 @@
 
         <!-- Progress Counter Section -->
         <section class="bg-cardbg p-5 sm:p-6 rounded-3xl border-2 border-cardborder flex flex-col md:flex-row justify-between items-center gap-4 shadow-sm relative overflow-hidden">
-            <!-- Decorative Strawberries Vector -->
             <div class="absolute -right-2 -bottom-2 opacity-15 pointer-events-none">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M50 20 C 30 20, 15 35, 25 70 C 30 85, 50 95, 50 95 C 50 95, 70 85, 75 70 C 85 35, 70 20, 50 20 Z" fill="#E8A0BF"/>
@@ -179,18 +176,14 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <!-- Cute Bunny in Tea Cup Icon -->
                 <div class="w-14 h-14 bg-[#F9F6F0] rounded-2xl border-2 border-[#EAE5D9] flex items-center justify-center shrink-0">
                     <svg width="42" height="42" viewBox="0 0 50 50" fill="none">
-                        <!-- Cup -->
                         <path d="M10 25 C 10 40, 16 44, 25 44 C 34 44, 40 40, 40 25 Z" fill="#A084CA" opacity="0.3" stroke="#3A3845" stroke-width="1.8"/>
                         <path d="M40 28 C 46 28, 46 36, 40 38" stroke="#3A3845" stroke-width="1.8" fill="none"/>
-                        <!-- Bunny Ears -->
                         <ellipse cx="20" cy="14" rx="3.5" ry="9" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
                         <ellipse cx="20" cy="14" rx="1.8" ry="6" fill="#E8A0BF"/>
                         <ellipse cx="30" cy="14" rx="3.5" ry="9" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
                         <ellipse cx="30" cy="14" rx="1.8" ry="6" fill="#E8A0BF"/>
-                        <!-- Bunny Head -->
                         <circle cx="25" cy="23" r="10" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
                         <circle cx="21" cy="23" r="1.2" fill="#3A3845"/>
                         <circle cx="29" cy="23" r="1.2" fill="#3A3845"/>
@@ -223,7 +216,6 @@
         <!-- Cute Dashed Divider with Bow -->
         <div class="flex items-center justify-center my-6 gap-3">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
-            <!-- Bow SVG -->
             <svg width="28" height="20" viewBox="0 0 30 22" fill="none">
                 <path d="M15 8 C 8 0, 0 4, 3 12 C 6 18, 13 12, 15 10 C 17 12, 24 18, 27 12 C 30 4, 22 0, 15 8 Z" fill="#E8A0BF" stroke="#3A3845" stroke-width="1.5"/>
                 <circle cx="15" cy="10" r="3" fill="#A084CA" stroke="#3A3845" stroke-width="1.5"/>
@@ -242,9 +234,7 @@
                 <span class="text-xs text-[#82808F]">🍓 Official Channel</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="brand-posts">
-                <!-- Javascript dynamic injection -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="brand-posts"></div>
         </section>
 
         <!-- Cute Dashed Divider with Heart -->
@@ -266,16 +256,13 @@
                 <span class="text-xs text-[#82808F]">🎀 High Priority Engagement</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="media-posts">
-                <!-- Javascript dynamic injection -->
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="media-posts"></div>
         </section>
 
     </main>
 
     <!-- Floating Captions Box -->
     <aside id="caption-widget" class="fixed top-4 right-4 sm:top-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-80 bg-white/95 backdrop-blur-md border-2 border-[#7C9DAB]/40 rounded-3xl p-4 shadow-xl z-50 transition-all duration-300">
-        <!-- Floating Sticker Decoration on Card Top -->
         <div class="absolute -top-3 left-6 bg-[#F7E398] border border-yellow-300 text-[#3A3845] text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
             <span>✨ Comment Helper</span>
         </div>
@@ -329,7 +316,7 @@
         </div>
     </aside>
 
-    <!-- Floating Restore Widget Button (shown when widget minimized) -->
+    <!-- Floating Restore Widget Button -->
     <button id="restore-caption-btn" onclick="toggleCaptionWidget()" class="hidden fixed bottom-6 right-6 bg-[#7C9DAB] hover:bg-[#6b8c9a] text-white text-xs font-bold px-4 py-3 rounded-full shadow-lg transition-all z-40 flex items-center gap-2 border-2 border-white animate-bounce">
         <span>💬</span>
         <span>Open Captions</span>
@@ -354,22 +341,22 @@
         // 2. Hashtags
         const targetHashtags = "#GUCCIxPPKRIT #Gucci #PPKritt";
 
-        // 3. Template phrases for adorable auto caption generation
+        // 3. 评论词库：强制所有搭配均包含 PP Krit / PPKRIT 和 GUCCI 两个关键词
         const captionTemplates = {
             openings: [
                 "Absolute perfection! 💖",
-                "The style, the elegance! ✨",
+                "The style and elegance are unmatched! ✨",
                 "So proud of our boy 🌷",
-                "Can't take my eyes off 🎀",
+                "Can't take my eyes off! 🎀",
                 "Pure luxury and magic! 💫",
-                "An absolute masterpiece! 🎨",
+                "An absolute fashion masterpiece! 🎨",
                 "Serving pure visual excellence! 🌟"
             ],
             subjects: [
                 "PP Krit at GUCCI Milan FW",
-                "PP Krit in Milan",
-                "PP Krit for GUCCI",
-                "PP Krit's incredible look"
+                "PPKRIT for GUCCI",
+                "PP Krit in GUCCI Milan Fashion Week",
+                "PPKRIT looking absolutely iconic in GUCCI"
             ],
             praises: [
                 "is completely stunning! 💖",
@@ -387,21 +374,34 @@
         window.onload = function() {
             renderPosts();
             updateProgress();
-            switchPlatform('IG'); // 初始化为 IG 模式
+            switchPlatform('IG');
         };
 
-        // Random Caption Generator
+        // 强校验随机评论生成逻辑
         function generateRandomCaption() {
             const rand = arr => arr[Math.floor(Math.random() * arr.length)];
             const opening = rand(captionTemplates.openings);
             const subject = rand(captionTemplates.subjects);
             const praise = rand(captionTemplates.praises);
 
-            currentRawText = `${opening} ${subject} ${praise}`;
+            let result = `${opening} ${subject} ${praise}`;
+
+            // 双重安全校验：若随机句式中缺任意一个关键词则自动补全
+            const hasPP = /pp\s*krit|ppkrit/i.test(result);
+            const hasGucci = /gucci/i.test(result);
+
+            if (!hasPP && !hasGucci) {
+                result += " - PP Krit for GUCCI! ✨";
+            } else if (!hasPP) {
+                result += " - Love PP Krit! 💖";
+            } else if (!hasGucci) {
+                result += " for GUCCI! ✨";
+            }
+
+            currentRawText = result;
             updateCaptionDisplay();
         }
 
-        // Refresh Caption Display Area
         function updateCaptionDisplay() {
             const hashtagCheckbox = document.getElementById('hashtag-toggle');
             const withHashtag = hashtagCheckbox ? hashtagCheckbox.checked : false;
@@ -417,13 +417,11 @@
             }
         }
 
-        // Copy Caption to Clipboard with Toast
         function copyCaption() {
             const captionBox = document.getElementById('caption-box');
             if (!captionBox) return;
 
             const textToCopy = captionBox.innerText;
-
             const textArea = document.createElement("textarea");
             textArea.value = textToCopy;
             document.body.appendChild(textArea);
@@ -447,7 +445,6 @@
             }
         }
 
-        // Render Posts Cards
         function renderPosts() {
             const completed = getCompletedPosts();
             
@@ -529,7 +526,6 @@
             }
         }
 
-        // 切换平台并自动联动 Hashtag 开关状态
         function switchPlatform(platform) {
             currentPlatform = platform;
             const tabIG = document.getElementById('tab-ig');
@@ -540,14 +536,10 @@
             if (platform === 'IG') {
                 tabIG.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
                 tabX.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
-                
-                // IG 模式：默认不选中 hashtag
                 if (hashtagCheckbox) hashtagCheckbox.checked = false;
             } else {
                 tabX.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
                 tabIG.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
-                
-                // X 模式：默认选中 hashtag
                 if (hashtagCheckbox) hashtagCheckbox.checked = true;
             }
             generateRandomCaption();
