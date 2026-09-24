@@ -156,7 +156,7 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto space-y-5 pr-0 lg:pr-88 relative z-10">
+    <main class="max-w-6xl mx-auto space-y-5 lg:pr-88 relative z-10">
 
         <!-- Progress Counter Section -->
         <section class="bg-cardbg p-3.5 sm:p-4 rounded-2xl border-2 border-cardborder flex flex-col md:flex-row justify-between items-center gap-3 shadow-sm relative overflow-hidden">
@@ -380,14 +380,14 @@
                 { id: "m001", name:"Next stop: Milan. ✈️ ",link: " https://www.instagram.com/p/DdlzWBNnz8I/?stkn=MTRuYmdocThtajZpcg%3D%3D", likes: "32k", comments: "1532" },
                 { id: "m024", name:"important⭐️",link: "https://www.instagram.com/reel/DdpwzwSp2pd/?stkn=Mm9qZnZsNHpmcHp1"  },
                 { id: "m025", name:"important2⭐️",link: "https://www.instagram.com/reel/DdpxQxdvpm0/?stkn=MTdoc3FjZmRtYnJwcA=="  },
-                { id: "m015", name:"wwdthailand⭐️",link: "https://www.instagram.com/p/DdnQzVKE7S5/?stkn=MXM4Njk3M2NsMXBrcA%3D%3D",likes: "10k", comments: "673" },o
+                { id: "m015", name:"wwdthailand⭐️",link: "https://www.instagram.com/p/DdnQzVKE7S5/?stkn=MXM4Njk3M2NsMXBrcA%3D%3D",likes: "10k", comments: "673" },
                 { id: "m004", name:"mensfolio⭐️",link: " https://www.instagram.com/p/DdmCbHMmDeI/?img_index=1",likes: "19k", comments: "731" },  
                 { id: "m010", name:"Mensfoliomy⭐️",link: " https://www.instagram.com/p/DdmEWWUEgeV/?img_index=1",likes: "8829", comments: "733" },
                 { id: "m018", name:"fabmagazineth（NEW）",link: "  https://www.instagram.com/reels/Ddlp_lSJ2sf/"  },        
                 { id: "m012", name:"mint",link:" https://www.instagram.com/p/DdnQ3NQE7Cw/?img_index=5&stkn=bmVvamd6dXN0dWMx"  },
                 { id: "m013", name:"bazzarth（BKPP）",link: "https://www.instagram.com/p/DdnQk7LkyA1/?stkn=enFtOWdhMTNwNmlh"  },
                 { id: "m014", name:"vogueth（BKPP）",link: "https://www.instagram.com/p/DdnQn1dD99m/?stkn=NnYxMHhjcW45c2Rj"  },
-                { id: "m015", name:"ellethailandofficial（BKPP）",link: "https://www.instagram.com/p/DdiDvRxyeD3/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ%3D%3D"  },
+                { id: "m015_2", name:"ellethailandofficial（BKPP）",link: "https://www.instagram.com/p/DdiDvRxyeD3/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ%3D%3D"  },
                 { id: "m017", name:"ellementh（BKPP）",link: "https://www.instagram.com/p/DdnSMjkEjF2/?img_index=1"  },   
                 { id: "m016", name:"lofficielmy（BKPP）",link: "https://www.instagram.com/p/DdmWgoeH0LK/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ%3D%3D"  },
                 { id: "m019", name:"tatlerth（BKPP）",link: "https://www.instagram.com/p/DdnUp6REw1X/?img_index=2&stkn=MTV5Mm05N3Jia3ZhYg%3D%3D"  },
@@ -423,7 +423,7 @@
                 { id: "x006", name: "PPENT POST6", link: "https://x.com/ppkrit_ent/status/2102383902912655788?s=46" },
                 { id: "x007", name: "PPENT POST7", link: "https://x.com/ppkrit_ent/status/2102383940581614076?s=46" },
                 { id: "x008", name: "daradaily", link: "https://x.com/daradaily/status/2102388877369729139?s=46" },
-                { id: "x008", name: "tpoptjai", link: "https://x.com/tpoptjai_/status/2102386937613234583?s=46" },
+                { id: "x008_2", name: "tpoptjai", link: "https://x.com/tpoptjai_/status/2102386937613234583?s=46" },
                 { id: "x009", name: "hello_asian", link: "https://x.com/hello_asian/status/2102418106232774968?s=46" },
                 { id: "x010", name: "eleva_official", link: "https://x.com/eleva_official/status/2102434613239181751?s=46" },
                 { id: "x011", name: "noppewth", link: "https://x.com/noppewth/status/2102440263390237030?s=46" },
@@ -436,7 +436,8 @@
         };
 
         // 2. Hashtags
-        const targetHashtags = "PP KRIT X GUCCI MFW26#GUCCISS27xPPKRIT#GucciTheStoreShow#Gucci #PPKritt #MFW@gucci @ppkritt";
+        const targetHashtags = "#PPKRITxGUCCIMFW26 #GUCCISS27xPPKRIT #GucciTheStoreShow #Gucci #PPKritt #MFW @gucci @ppkritt";
+        
         // 3. 评论词库
         const captionTemplates = {
             shorts: [
@@ -581,7 +582,7 @@
             }
         }
 
-        // 渲染卡片列表 (已优化为超紧凑结构)
+        // 渲染卡片列表
         function renderPosts() {
             const completed = getCompletedPosts();
             
