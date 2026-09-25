@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PP Engagement - GUCCI MILAN FW Fan Boosting Hub">
+    <meta name="theme-color" content="#F9F6F0">
     <title>PP Engagement - GUCCI MILAN FW</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐰</text></svg>">
     <!-- Google Fonts 可爱手写/卡通字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,65 +37,58 @@
         }
     </script>
     <style>
-        body { 
-            background-color: #F9F6F0; 
-            color: #3A3845; 
+        body {
+            background-color: #F9F6F0;
+            color: #3A3845;
             font-family: system-ui, -apple-system, sans-serif;
             background-image: radial-gradient(#EAE5D9 1.5px, transparent 1.5px);
             background-size: 24px 24px;
         }
 
-        .font-cute-title {
-            font-family: 'Fredoka', cursive, sans-serif;
-        }
+        .font-cute-title { font-family: 'Fredoka', cursive, sans-serif; }
 
         @keyframes float-gentle {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-8px) rotate(2deg); }
         }
-
         @keyframes float-reverse {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-6px) rotate(-2deg); }
         }
-
         @keyframes pulse-slow {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
 
-        .animate-float {
-            animation: float-gentle 4s ease-in-out infinite;
-        }
+        .animate-float { animation: float-gentle 4s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-reverse 5s ease-in-out 1s infinite; }
+        .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
 
-        .animate-float-delayed {
-            animation: float-reverse 5s ease-in-out 1s infinite;
-        }
-
-        .animate-pulse-slow {
-            animation: pulse-slow 3s ease-in-out infinite;
-        }
+        /* 卡片完成态切换动画 */
+        .post-card { transition: border-color .3s ease, background-color .3s ease, box-shadow .2s ease; }
+        .post-card .badge { transition: background-color .3s ease; }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F9F6F0;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D5CFC2;
-            border-radius: 999px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #A084CA;
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F9F6F0; }
+        ::-webkit-scrollbar-thumb { background: #D5CFC2; border-radius: 999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #A084CA; }
+
+        /* 尊重系统"减少动态效果"设置 */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
+<base target="_blank">
 </head>
 <body class="min-h-screen p-3 sm:p-6 relative pb-28 bg-cream overflow-x-hidden selection:bg-softpink/30">
 
     <!-- Top-Left Floating Decorative Bunny & Cloud -->
-    <div class="fixed top-3 left-3 md:top-6 md:left-8 z-0 pointer-events-none opacity-80 animate-float hidden sm:block">
+    <div class="fixed top-3 left-3 md:top-6 md:left-8 z-0 pointer-events-none opacity-80 animate-float hidden sm:block" aria-hidden="true">
         <svg width="100" height="100" viewBox="0 0 120 120" fill="none">
             <path d="M20 70 C 10 70, 5 55, 20 45 C 20 30, 40 25, 55 35 C 65 20, 85 25, 90 40 C 105 40, 110 55, 100 70 C 105 85, 85 90, 75 85 C 65 95, 40 95, 30 85 C 15 90, 10 80, 20 70 Z" fill="#FFFFFF" stroke="#EAE5D9" stroke-width="2.5"/>
             <ellipse cx="60" cy="48" rx="14" ry="16" fill="#FFFFFF" stroke="#3A3845" stroke-width="2"/>
@@ -109,7 +105,7 @@
     </div>
 
     <!-- Bottom-Left Decorative Bunny Resting on Pillows -->
-    <div class="fixed bottom-4 left-4 z-0 pointer-events-none opacity-85 animate-float-delayed hidden lg:block">
+    <div class="fixed bottom-4 left-4 z-0 pointer-events-none opacity-85 animate-float-delayed hidden lg:block" aria-hidden="true">
         <svg width="130" height="110" viewBox="0 0 130 110" fill="none">
             <rect x="20" y="55" width="90" height="40" rx="18" fill="#A084CA" opacity="0.25" stroke="#A084CA" stroke-width="2"/>
             <circle cx="20" cy="75" r="4" fill="#A084CA"/>
@@ -133,7 +129,7 @@
     <header class="max-w-6xl mx-auto flex justify-between items-center mb-4 border-b-2 border-dashed border-[#EAE5D9] pb-3 relative z-10">
         <div class="flex items-center gap-2.5">
             <div class="p-2 bg-white rounded-2xl shadow-sm border border-cardborder flex items-center justify-center">
-                <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
                     <path d="M20 34 V 22" stroke="#7C9DAB" stroke-width="3" stroke-linecap="round"/>
                     <path d="M20 28 C 12 26, 10 32, 12 34" stroke="#7C9DAB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                     <path d="M20 26 C 28 24, 30 30, 28 32" stroke="#7C9DAB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
@@ -156,11 +152,12 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto space-y-5 lg:pr-88 relative z-10">
+    <!-- 修复: pr-88 不是 Tailwind 有效值, 改用 arbitrary value -->
+    <main class="max-w-6xl mx-auto space-y-5 lg:pr-[21rem] relative z-10">
 
         <!-- Progress Counter Section -->
         <section class="bg-cardbg p-3.5 sm:p-4 rounded-2xl border-2 border-cardborder flex flex-col md:flex-row justify-between items-center gap-3 shadow-sm relative overflow-hidden">
-            <div class="absolute -right-2 -bottom-2 opacity-15 pointer-events-none">
+            <div class="absolute -right-2 -bottom-2 opacity-15 pointer-events-none" aria-hidden="true">
                 <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
                     <path d="M50 20 C 30 20, 15 35, 25 70 C 30 85, 50 95, 50 95 C 50 95, 70 85, 75 70 C 85 35, 70 20, 50 20 Z" fill="#E8A0BF"/>
                     <path d="M40 22 C 45 10, 55 10, 60 22 C 55 25, 45 25, 40 22 Z" fill="#7C9DAB"/>
@@ -169,7 +166,7 @@
 
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#F9F6F0] rounded-xl border border-[#EAE5D9] flex items-center justify-center shrink-0">
-                    <svg width="32" height="32" viewBox="0 0 50 50" fill="none">
+                    <svg width="32" height="32" viewBox="0 0 50 50" fill="none" aria-hidden="true">
                         <path d="M10 25 C 10 40, 16 44, 25 44 C 34 44, 40 40, 40 25 Z" fill="#A084CA" opacity="0.3" stroke="#3A3845" stroke-width="1.8"/>
                         <path d="M40 28 C 46 28, 46 36, 40 38" stroke="#3A3845" stroke-width="1.8" fill="none"/>
                         <ellipse cx="20" cy="14" rx="3.5" ry="9" fill="#FFFFFF" stroke="#3A3845" stroke-width="1.5"/>
@@ -187,7 +184,7 @@
                 <div>
                     <h2 class="text-xs sm:text-sm font-bold text-[#3A3845] flex items-center gap-1.5">
                         Posts Reviewed (打卡进度)
-                        <span class="text-[10px] bg-[#F7E398] text-[#3A3845] font-semibold px-1.5 py-0.2 rounded-full border border-yellow-300">Auto Saved</span>
+                        <span class="text-[10px] bg-[#F7E398] text-[#3A3845] font-semibold px-1.5 py-0.5 rounded-full border border-yellow-300">Auto Saved</span>
                     </h2>
                     <p class="text-[11px] text-[#82808F] mt-0.5">点击下方链接跳转打卡，已完成任务会自动保存在浏览器中哦 ~</p>
                 </div>
@@ -198,8 +195,8 @@
                     <span class="text-[10px] text-[#82808F] font-semibold">Completed</span>
                     <span id="progress-text" class="text-xl font-black text-[#A084CA] tracking-wider">0 / 0</span>
                 </div>
-                <button onclick="resetProgress()" class="text-xs bg-[#F9F6F0] hover:bg-red-50 hover:text-red-500 hover:border-red-200 px-2.5 py-1.5 rounded-lg text-[#82808F] border border-[#EAE5D9] font-medium transition flex items-center gap-1 active:scale-95 shadow-sm">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                <button id="reset-btn" class="text-xs bg-[#F9F6F0] hover:bg-red-50 hover:text-red-500 hover:border-red-200 px-2.5 py-1.5 rounded-lg text-[#82808F] border border-[#EAE5D9] font-medium transition flex items-center gap-1 active:scale-95 shadow-sm">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
                     Reset
                 </button>
             </div>
@@ -221,7 +218,7 @@
         </div>
 
         <!-- Cute Dashed Divider with Bow -->
-        <div class="flex items-center justify-center my-3 gap-2">
+        <div class="flex items-center justify-center my-3 gap-2" aria-hidden="true">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
             <svg width="22" height="16" viewBox="0 0 30 22" fill="none">
                 <path d="M15 8 C 8 0, 0 4, 3 12 C 6 18, 13 12, 15 10 C 17 12, 24 18, 27 12 C 30 4, 22 0, 15 8 Z" fill="#E8A0BF" stroke="#3A3845" stroke-width="1.5"/>
@@ -231,10 +228,10 @@
         </div>
 
         <!-- PP KRIT IG Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="brand">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#7C9DAB] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#7C9DAB] inline-block animate-pulse-slow"></span>
                     <span>PP KRIT OFFICIAL IG</span>
                     <span class="text-[10px] text-[#82808F] font-normal font-sans">(Brand & Personal)</span>
                 </h3>
@@ -244,10 +241,10 @@
         </section>
 
         <!-- GUCCI OFFICIAL Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="gucci_official">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#F7E398] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#F7E398] inline-block animate-pulse-slow"></span>
                     <span>GUCCI OFFICIAL</span>
                 </h3>
                 <span class="text-[10px] text-[#82808F]">👜 Luxury Brand</span>
@@ -256,7 +253,7 @@
         </section>
 
         <!-- Cute Dashed Divider with Heart -->
-        <div class="flex items-center justify-center my-3 gap-2">
+        <div class="flex items-center justify-center my-3 gap-2" aria-hidden="true">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#A084CA" stroke="#3A3845" stroke-width="1.5"/>
@@ -265,10 +262,10 @@
         </div>
 
         <!-- Media & KOL (ONLYPP) Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="media_onlypp">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#E8A0BF] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#E8A0BF] inline-block animate-pulse-slow"></span>
                     <span>Media & KOL (ONLYPP)</span>
                 </h3>
                 <span class="text-[10px] text-[#82808F]">🎀 High Priority</span>
@@ -277,10 +274,10 @@
         </section>
 
         <!-- PPENT Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="ppent_posts">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#A084CA] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#A084CA] inline-block animate-pulse-slow"></span>
                     <span>PPENT</span>
                 </h3>
                 <span class="text-[10px] text-[#82808F]">🏢 Official Entertainment</span>
@@ -289,10 +286,10 @@
         </section>
 
         <!-- Media & KOL (BKPP) Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="media_bkpp">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#A084CA] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#A084CA] inline-block animate-pulse-slow"></span>
                     <span>Media & KOL (BKPP)</span>
                 </h3>
                 <span class="text-[10px] text-[#82808F]">✨ Duo Coverage</span>
@@ -301,7 +298,7 @@
         </section>
 
         <!-- Cute Dashed Divider with Star -->
-        <div class="flex items-center justify-center my-3 gap-2">
+        <div class="flex items-center justify-center my-3 gap-2" aria-hidden="true">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#F7E398" stroke="#3A3845" stroke-width="1.5" stroke-linejoin="round"/>
@@ -310,10 +307,10 @@
         </div>
 
         <!-- TIKTOK Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="tiktok_posts">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#E8A0BF] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#E8A0BF] inline-block animate-pulse-slow"></span>
                     <span>TIKTOK</span>
                 </h3>
                 <span class="text-[10px] text-[#82808F]">🎵 Viral Videos</span>
@@ -322,7 +319,7 @@
         </section>
 
         <!-- Cute Dashed Divider with Flower -->
-        <div class="flex items-center justify-center my-3 gap-2">
+        <div class="flex items-center justify-center my-3 gap-2" aria-hidden="true">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M12 2C9.5 2 7.5 4 7.5 6.5C7.5 7.5 7.8 8.4 8.3 9.1C6 9.6 4.5 11.6 4.5 14C4.5 16.8 6.7 19 9.5 19C10.5 19 11.4 18.7 12 18.2C12.6 18.7 13.5 19 14.5 19C17.3 19 19.5 16.8 19.5 14C19.5 11.6 18 9.6 15.7 9.1C16.2 8.4 16.5 7.5 16.5 6.5C16.5 4 14.5 2 12 2Z" fill="#7C9DAB" stroke="#3A3845" stroke-width="1.5"/>
@@ -332,10 +329,10 @@
         </div>
 
         <!-- X (Twitter) Section -->
-        <section class="space-y-2">
+        <section class="space-y-2" data-section="x_posts">
             <div class="flex items-center justify-between">
                 <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#3A3845] inline-block animate-pulse-slow"></span> 
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#3A3845] inline-block animate-pulse-slow"></span>
                     <span>X (Twitter)</span>
                 </h3>
                 <span class="text-[10px] text-[#82808F]">🐦 Trend Boosting</span>
@@ -355,15 +352,15 @@
             <div class="flex items-center gap-1.5 text-xs font-bold text-[#3A3845]">
                 <span class="text-[#A084CA] text-sm">🐇</span> GUCCI Milan FW Captions
             </div>
-            <button onclick="toggleCaptionWidget()" class="text-[#82808F] hover:text-[#3A3845] bg-[#F9F6F0] hover:bg-[#EAE5D9] w-6 h-6 rounded-full flex items-center justify-center text-xs transition">✕</button>
+            <button id="close-widget-btn" class="text-[#82808F] hover:text-[#3A3845] bg-[#F9F6F0] hover:bg-[#EAE5D9] w-6 h-6 rounded-full flex items-center justify-center text-xs transition" aria-label="关闭评论助手">✕</button>
         </div>
 
         <!-- Platform Tabs -->
-        <div class="flex gap-1 mb-3 bg-[#F9F6F0] p-1 rounded-2xl border border-cardborder">
-            <button id="tab-igtt" onclick="switchPlatform('IGTT')" class="flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1">
+        <div class="flex gap-1 mb-3 bg-[#F9F6F0] p-1 rounded-2xl border border-cardborder" role="tablist">
+            <button id="tab-igtt" data-platform="IGTT" class="flex-1 py-1.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1" role="tab" aria-selected="true">
                 <span>📷/🎵</span> IG / TT
             </button>
-            <button id="tab-x" onclick="switchPlatform('X')" class="flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1">
+            <button id="tab-x" data-platform="X" class="flex-1 py-1.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1" role="tab" aria-selected="false">
                 <span>🐦</span> X
             </button>
         </div>
@@ -374,7 +371,7 @@
                 <span class="text-[#E8A0BF]">🏷️</span> Include Hashtags
             </span>
             <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="hashtag-toggle" onchange="updateCaptionDisplay()" class="sr-only peer">
+                <input type="checkbox" id="hashtag-toggle" class="sr-only peer" role="switch">
                 <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#7C9DAB]"></div>
             </label>
         </div>
@@ -386,29 +383,55 @@
 
         <!-- Bottom Action Controls -->
         <div class="flex gap-2">
-            <button onclick="generateRandomCaption()" class="flex-1 bg-white hover:bg-[#7C9DAB]/10 text-[#3A3845] border-2 border-[#7C9DAB]/40 py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95">
+            <button id="random-btn" class="flex-1 bg-white hover:bg-[#7C9DAB]/10 text-[#3A3845] border-2 border-[#7C9DAB]/40 py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95">
                 <span>🔀</span> Random
             </button>
-            <button onclick="copyCaption()" class="flex-1 bg-[#A084CA] hover:bg-[#8e72b8] text-white py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md active:scale-95">
+            <button id="copy-btn" class="flex-1 bg-[#A084CA] hover:bg-[#8e72b8] text-white py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md active:scale-95">
                 <span>📋</span> Copy
             </button>
         </div>
-        
+
         <!-- Toast Notification -->
-        <div id="toast" class="hidden mt-2 text-center text-xs text-[#7C9DAB] font-bold bg-[#7C9DAB]/10 py-1.5 rounded-xl border border-[#7C9DAB]/30 animate-pulse">
+        <div id="toast" class="hidden mt-2 text-center text-xs text-[#7C9DAB] font-bold bg-[#7C9DAB]/10 py-1.5 rounded-xl border border-[#7C9DAB]/30 animate-pulse" role="status">
             ✨ Copied to Clipboard!
         </div>
     </aside>
 
     <!-- Floating Restore Widget Button -->
-    <button id="restore-caption-btn" onclick="toggleCaptionWidget()" class="hidden fixed bottom-6 right-6 bg-[#7C9DAB] hover:bg-[#6b8c9a] text-white text-xs font-bold px-4 py-3 rounded-full shadow-lg transition-all z-40 flex items-center gap-2 border-2 border-white animate-bounce">
+    <button id="restore-caption-btn" class="hidden fixed bottom-6 right-6 bg-[#7C9DAB] hover:bg-[#6b8c9a] text-white text-xs font-bold px-4 py-3 rounded-full shadow-lg transition-all z-40 flex items-center gap-2 border-2 border-white animate-bounce">
         <span>💬</span>
         <span>Open Captions</span>
     </button>
 
     <script>
-        // 原始所有平台的帖子汇总数组
-        const allRawPosts = [
+    (function () {
+        'use strict';
+
+        /* ================= 常量与存储 ================= */
+        var STORAGE = {
+            done: 'completed_posts',
+            platform: 'caption_platform',
+            hashtag: 'caption_hashtag',
+            widgetHidden: 'caption_widget_hidden'
+        };
+
+        var store = {
+            get: function (key, fallback) {
+                try {
+                    var v = localStorage.getItem(key);
+                    return v === null ? fallback : JSON.parse(v);
+                } catch (e) { return fallback; }
+            },
+            set: function (key, value) {
+                try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+            },
+            remove: function (key) {
+                try { localStorage.removeItem(key); } catch (e) {}
+            }
+        };
+
+        /* ================= 数据 ================= */
+        var allRawPosts = [
             // Instagram / Media Posts
             { id: "m050", name: "ig_PPENT", link: "https://www.instagram.com/reel/DdquzN1BaUR/?stkn=bjNwaXl3dTJ1NjJx" },
             { id: "m055", name: "ig_PPENT", link: "https://www.instagram.com/p/DdqPRNfn1tb/?stkn=ejMwNXlpNGk1bHQx" },
@@ -530,48 +553,6 @@
             { id: "x016", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2102435416049934373?s=46" }
         ];
 
-        // 基础过滤条件
-        const filterGucci = (item) => item.name && item.name.toUpperCase().includes("GUCCI");
-        const filterPpent = (item) => item.name && item.name.toUpperCase().includes("PPENT");
-        const filterBkpp = (item) => item.name && item.name.toUpperCase().includes("BKPP");
-
-        // 平台的优先级排序算法（instagram > tiktok > x > other）
-        const getPlatformPriority = (link) => {
-            const l = link.toLowerCase();
-            if (l.includes("instagram.com")) return 1;
-            if (l.includes("tiktok.com")) return 2;
-            if (l.includes("x.com") || l.includes("twitter.com")) return 3;
-            return 4;
-        };
-
-        const sortByPriority = (arr) => {
-            return arr.slice().sort((a, b) => getPlatformPriority(a.link) - getPlatformPriority(b.link));
-        };
-
-        // 动态构建按照逻辑分类且按平台优先级排好的 postsData
-        const gucciPosts = sortByPriority(allRawPosts.filter(item => filterGucci(item)));
-        const ppentPosts = sortByPriority(allRawPosts.filter(item => filterPpent(item) && !filterGucci(item)));
-        const remainingPosts = allRawPosts.filter(item => !filterGucci(item) && !filterPpent(item));
-
-        const postsData = {
-            brand: [
-                { id: "pp004", name: "🐼 （NEW）", link: "https://www.instagram.com/pp.kritt/p/DdrNnn7AQXp/", likes: "177k", comments: "7336" },
-                { id: "pp003", name: "🖼️（NEW）", link: "https://www.instagram.com/p/DdqDTukCPbK/?img_index=1", likes: "237k", comments: "13k" },   
-                { id: "pp002", name: "🚃（NEW）", link: "https://www.instagram.com/p/DdpUE08ysFK/", likes: "280k", comments: "14k" },        
-                { id: "pp001", name: "Ciao 🙂‍↔️", link: "https://www.instagram.com/pp.kritt/p/Ddly5Nlgdz9/", likes: "343k", comments: "25k" }           
-            ],
-            gucci_official: gucciPosts,
-            ppent_posts: ppentPosts,
-            media_onlypp: sortByPriority(remainingPosts.filter(item => !filterBkpp(item) && getPlatformPriority(item.link) === 1)),
-            media_bkpp: sortByPriority(remainingPosts.filter(item => filterBkpp(item) && getPlatformPriority(item.link) === 1)),
-            tiktok_posts: sortByPriority(remainingPosts.filter(item => getPlatformPriority(item.link) === 2)),
-            x_posts: sortByPriority(remainingPosts.filter(item => getPlatformPriority(item.link) === 3))
-        };
-
-        // Hashtags 库
-        const targetHashtags = "#PPKRITxGUCCIMFW26 #GUCCISS27xPPKRIT #GucciTheStoreShow #Gucci #PPKritt #MFW @gucci @ppkritt";
-        
-        // 评论语料库
         const captionTemplates = {
             shorts: [
                 "PPKRIT x GUCCI is pure magic! ✨",
@@ -631,207 +612,314 @@
             ]
         };
 
-        let currentRawText = "";
-        let currentPlatform = "IGTT";
+        var targetHashtags = "#PPKRITxGUCCIMFW26 #GUCCISS27xPPKRIT #GucciTheStoreShow #Gucci #PPKritt #MFW @gucci @ppkritt";
 
-        // 初始化运行
-        window.onload = function() {
-            renderPosts();
-            updateProgress();
-            switchPlatform('IGTT');
+        /* ================= 数据清洗: 去重 ================= */
+        (function dedupe() {
+            var seenId = {}, seenLink = {}, removed = [];
+            allRawPosts = allRawPosts.filter(function (p) {
+                if (seenId[p.id] || seenLink[p.link]) { removed.push(p.id); return false; }
+                seenId[p.id] = seenLink[p.link] = true;
+                return true;
+            });
+            if (removed.length) console.warn('[dedupe] 已移除重复项:', removed);
+        })();
+
+        /* ================= 分类逻辑 ================= */
+        function getPlatformPriority(link) {
+            var l = link.toLowerCase();
+            if (l.indexOf('instagram.com') !== -1) return 1;
+            if (l.indexOf('tiktok.com') !== -1) return 2;
+            if (l.indexOf('x.com') !== -1 || l.indexOf('twitter.com') !== -1) return 3;
+            return 4;
+        }
+        function sortByPriority(arr) {
+            return arr.slice().sort(function (a, b) {
+                return getPlatformPriority(a.link) - getPlatformPriority(b.link);
+            });
+        }
+        var UPPER = function (s) { return (s || '').toUpperCase(); };
+        var filterGucci = function (item) { return UPPER(item.name).indexOf('GUCCI') !== -1; };
+        var filterPpent = function (item) { return UPPER(item.name).indexOf('PPENT') !== -1; };
+        var filterBkpp  = function (item) { return UPPER(item.name).indexOf('BKPP') !== -1; };
+
+        var gucciPosts   = sortByPriority(allRawPosts.filter(filterGucci));
+        var ppentPosts   = sortByPriority(allRawPosts.filter(function (i) { return filterPpent(i) && !filterGucci(i); }));
+        var remaining    = allRawPosts.filter(function (i) { return !filterGucci(i) && !filterPpent(i); });
+
+        var postsData = {
+            brand: [
+                { id: "pp004", name: "🐼 （NEW）", link: "https://www.instagram.com/pp.kritt/p/DdrNnn7AQXp/", likes: "177k", comments: "7336" },
+                { id: "pp003", name: "🖼️（NEW）", link: "https://www.instagram.com/p/DdqDTukCPbK/?img_index=1", likes: "237k", comments: "13k" },
+                { id: "pp002", name: "🚃（NEW）", link: "https://www.instagram.com/p/DdpUE08ysFK/", likes: "280k", comments: "14k" },
+                { id: "pp001", name: "Ciao 🙂‍↔️", link: "https://www.instagram.com/pp.kritt/p/Ddly5Nlgdz9/", likes: "343k", comments: "25k" }
+            ],
+            gucci_official: gucciPosts,
+            ppent_posts: ppentPosts,
+            media_onlypp: sortByPriority(remaining.filter(function (i) { return !filterBkpp(i) && getPlatformPriority(i.link) === 1; })),
+            media_bkpp: sortByPriority(remaining.filter(function (i) { return filterBkpp(i) && getPlatformPriority(i.link) === 1; })),
+            tiktok_posts: sortByPriority(remaining.filter(function (i) { return getPlatformPriority(i.link) === 2; })),
+            x_posts: sortByPriority(remaining.filter(function (i) { return getPlatformPriority(i.link) === 3; }))
         };
 
-        function generateRandomCaption() {
-            const rand = arr => arr[Math.floor(Math.random() * arr.length)];
-            const typeChance = Math.random();
-            let result = "";
+        var SECTION_KEYS = ['brand', 'gucci_official', 'media_onlypp', 'ppent_posts', 'media_bkpp', 'tiktok_posts', 'x_posts'];
+        var VALID_IDS = {};
+        SECTION_KEYS.forEach(function (k) {
+            postsData[k].forEach(function (p) { VALID_IDS[p.id] = true; });
+        });
 
-            if (typeChance < 0.3) {
-                result = rand(captionTemplates.shorts);
-            } else if (typeChance < 0.7) {
-                const open = rand(captionTemplates.m_openings);
-                const body = rand(captionTemplates.m_bodies);
-                const close = rand(captionTemplates.m_closings);
-                result = `${open} ${body}. ${close}`;
-            } else {
-                const open = rand(captionTemplates.l_openings);
-                const id = rand(captionTemplates.l_identities);
-                const rel = rand(captionTemplates.l_relations);
-                const perf = rand(captionTemplates.l_performances);
-                const feel = rand(captionTemplates.l_feelings);
-                const close = rand(captionTemplates.l_closings);
-                result = `${open} ${id}, ${rel} ${perf} ${feel} ${close}`;
+        /* ================= 工具 ================= */
+        var $ = function (sel, root) { return (root || document).querySelector(sel); };
+        var rand = function (arr) { return arr[Math.floor(Math.random() * arr.length)]; };
+        var escapeHtml = function (s) {
+            return String(s).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
+        };
+
+        function getCompletedPosts() {
+            var list = store.get(STORAGE.done, []);
+            // 清理已不存在于数据中的 id, 避免进度计数失真
+            var cleaned = list.filter(function (id) { return VALID_IDS[id]; });
+            if (cleaned.length !== list.length) store.set(STORAGE.done, cleaned);
+            return cleaned;
+        }
+
+        /* ================= 打卡进度 ================= */
+        function updateProgress() {
+            var completed = getCompletedPosts();
+            var total = SECTION_KEYS.reduce(function (sum, k) { return sum + postsData[k].length; }, 0);
+            var el = $('#progress-text');
+            if (el) el.textContent = completed.length + ' / ' + total;
+        }
+
+        /* ================= 渲染 ================= */
+        var EXTERNAL_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+
+        function buildCard(post, isDone, showStats) {
+            var statsHtml = (showStats && (post.likes || post.comments)) ? (
+                '<div class="flex items-center gap-1.5 mt-0.5">' +
+                (post.likes ? '<span class="flex items-center gap-0.5 text-[10px] font-bold text-[#82808F] bg-[#F9F6F0] px-1.5 py-0.5 rounded border border-cardborder"><span class="text-[#E8A0BF] text-[10px]">❤️</span> ' + escapeHtml(post.likes) + '</span>' : '') +
+                (post.comments ? '<span class="flex items-center gap-0.5 text-[10px] font-bold text-[#82808F] bg-[#F9F6F0] px-1.5 py-0.5 rounded border border-cardborder"><span class="text-[#7C9DAB] text-[10px]">💬</span> ' + escapeHtml(post.comments) + '</span>' : '') +
+                '</div>'
+            ) : '';
+
+            var card = document.createElement('div');
+            card.className = 'post-card bg-cardbg border py-2 px-3 rounded-xl flex justify-between items-center group ' +
+                (isDone ? 'border-[#7C9DAB] bg-[#7C9DAB]/5' : 'border-cardborder hover:shadow-sm');
+            card.dataset.postId = post.id;
+            card.innerHTML =
+                '<div class="flex flex-col min-w-0 pr-2">' +
+                    '<div class="flex items-center gap-2">' +
+                        '<span class="badge text-[10px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shrink-0 ' +
+                            (isDone ? 'bg-[#7C9DAB] text-white shadow-sm' : 'bg-[#A084CA] text-white') + '">' +
+                            (isDone ? 'DONE ✓' : 'BOOST!') +
+                        '</span>' +
+                        '<span class="text-xs font-bold text-[#3A3845] truncate group-hover:text-[#7C9DAB] transition">' + escapeHtml(post.name) + '</span>' +
+                    '</div>' +
+                    statsHtml +
+                '</div>' +
+                '<a href="' + escapeHtml(post.link) + '" target="_blank" rel="noopener noreferrer" data-action="open-post" data-post-id="' + escapeHtml(post.id) + '" ' +
+                    'class="ml-2 text-[10px] bg-[#F9F6F0] hover:bg-[#7C9DAB] hover:text-white text-[#82808F] p-1.5 rounded-lg border border-cardborder transition flex items-center justify-center shrink-0 shadow-sm active:scale-90" ' +
+                    'title="Open Post" aria-label="Open post: ' + escapeHtml(post.name) + '">' +
+                    EXTERNAL_ICON +
+                '</a>';
+            return card;
+        }
+
+        function renderPosts() {
+            var completed = getCompletedPosts();
+            SECTION_KEYS.forEach(function (key) {
+                var container = document.getElementById(key + '-posts');
+                if (!container) return;
+                var data = postsData[key];
+                container.textContent = '';
+                if (!data.length) {
+                    var empty = document.createElement('p');
+                    empty.className = 'text-xs text-subtext col-span-2 py-2 italic text-center';
+                    empty.textContent = '暂无内容 (No posts available)';
+                    container.appendChild(empty);
+                    return;
+                }
+                var frag = document.createDocumentFragment();
+                data.forEach(function (post) {
+                    frag.appendChild(buildCard(post, completed.indexOf(post.id) !== -1, true));
+                });
+                container.appendChild(frag);
+            });
+        }
+
+        // 事件委托: 打卡只更新对应卡片, 不再全量重绘
+        function onPostsClick(e) {
+            var link = e.target.closest('a[data-action="open-post"]');
+            if (!link) return;
+            var postId = link.dataset.postId;
+            var completed = getCompletedPosts();
+            if (completed.indexOf(postId) !== -1) return;
+            completed.push(postId);
+            store.set(STORAGE.done, completed);
+            var card = link.closest('.post-card');
+            if (card) {
+                card.classList.remove('border-cardborder', 'hover:shadow-sm');
+                card.classList.add('border-[#7C9DAB]', 'bg-[#7C9DAB]/5');
+                var badge = card.querySelector('.badge');
+                if (badge) {
+                    badge.classList.remove('bg-[#A084CA]');
+                    badge.classList.add('bg-[#7C9DAB]', 'shadow-sm');
+                    badge.textContent = 'DONE ✓';
+                }
             }
+            updateProgress();
+        }
+
+        function resetProgress() {
+            if (!confirm('确定要重置打卡进度吗？(Reset your progress?)')) return;
+            store.remove(STORAGE.done);
+            renderPosts();
+            updateProgress();
+        }
+
+        /* ================= 评论生成器 ================= */
+        var currentRawText = '';
+        var lastRawText = '';
+
+        function generateRandomCaption() {
+            var t = captionTemplates, result = '', tries = 0;
+            do {
+                var r = Math.random();
+                if (r < 0.3) {
+                    result = rand(t.shorts);
+                } else if (r < 0.7) {
+                    result = rand(t.m_openings) + ' ' + rand(t.m_bodies) + '. ' + rand(t.m_closings);
+                } else {
+                    result = rand(t.l_openings) + ' ' + rand(t.l_identities) + ', ' + rand(t.l_relations) + ' ' +
+                             rand(t.l_performances) + ' ' + rand(t.l_feelings) + ' ' + rand(t.l_closings);
+                }
+            } while (result === lastRawText && ++tries < 5); // 避免连续抽到同一句
 
             currentRawText = result;
+            lastRawText = result;
             updateCaptionDisplay();
         }
 
         function updateCaptionDisplay() {
-            const hashtagCheckbox = document.getElementById('hashtag-toggle');
-            const withHashtag = hashtagCheckbox ? hashtagCheckbox.checked : false;
-            let finalText = currentRawText;
-
-            if (withHashtag) {
-                finalText += "\n\n" + targetHashtags;
-            }
-
-            const captionBox = document.getElementById('caption-box');
-            if (captionBox) {
-                captionBox.innerText = finalText;
-            }
+            var hashtagCheckbox = $('#hashtag-toggle');
+            var withHashtag = hashtagCheckbox ? hashtagCheckbox.checked : false;
+            var captionBox = $('#caption-box');
+            if (captionBox) captionBox.textContent = currentRawText + (withHashtag ? '\n\n' + targetHashtags : '');
         }
 
         function copyCaption() {
-            const captionBox = document.getElementById('caption-box');
+            var captionBox = $('#caption-box');
             if (!captionBox) return;
+            var text = captionBox.textContent;
+            var done = function () { showToast(); };
 
-            const textToCopy = captionBox.innerText;
-            const textArea = document.createElement("textarea");
-            textArea.value = textToCopy;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                showToast();
-            } catch (err) {
-                if (navigator.clipboard) {
-                    navigator.clipboard.writeText(textToCopy).then(showToast);
-                }
-            }
-            document.body.removeChild(textArea);
-        }
-
-        function showToast() {
-            const toast = document.getElementById('toast');
-            if (toast) {
-                toast.classList.remove('hidden');
-                setTimeout(() => toast.classList.add('hidden'), 2200);
-            }
-        }
-
-        // 渲染页面数据列表
-        function renderPosts() {
-            const completed = getCompletedPosts();
-            
-            const renderList = (key, isIgSection = false) => {
-                const data = postsData[key] || [];
-                const container = document.getElementById(`${key}-posts`);
-                if (!container) return;
-
-                if (data.length === 0) {
-                    container.innerHTML = `<p class="text-xs text-subtext col-span-2 py-2 italic text-center">暂无内容 (No posts available)</p>`;
-                    return;
-                }
-
-                container.innerHTML = data.map(post => {
-                    const isDone = completed.includes(post.id);
-
-                    const statsHtml = (isIgSection && (post.likes || post.comments)) ? `
-                        <div class="flex items-center gap-1.5 mt-0.5">
-                            ${post.likes ? `<span class="flex items-center gap-0.5 text-[10px] font-bold text-[#82808F] bg-[#F9F6F0] px-1.5 py-0.2 rounded border border-cardborder"><span class="text-[#E8A0BF] text-[10px]">❤️</span> ${post.likes}</span>` : ''}
-                            ${post.comments ? `<span class="flex items-center gap-0.5 text-[10px] font-bold text-[#82808F] bg-[#F9F6F0] px-1.5 py-0.2 rounded border border-cardborder"><span class="text-[#7C9DAB] text-[10px]">💬</span> ${post.comments}</span>` : ''}
-                        </div>
-                    ` : '';
-
-                    return `
-                        <div class="bg-cardbg border ${isDone ? 'border-[#7C9DAB] bg-[#7C9DAB]/5' : 'border-cardborder'} py-2 px-3 rounded-xl flex justify-between items-center transition-all hover:shadow-sm group">
-                            <div class="flex flex-col min-w-0 pr-2">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-lg transition flex items-center gap-1 shrink-0 ${isDone ? 'bg-[#7C9DAB] text-white shadow-sm' : 'bg-[#A084CA] text-white'}">
-                                        ${isDone ? 'DONE ✓' : 'BOOST!'}
-                                    </span>
-                                    <span class="text-xs font-bold text-[#3A3845] truncate group-hover:text-[#7C9DAB] transition">${post.name}</span>
-                                </div>
-                                ${statsHtml}
-                            </div>
-                            <a href="${post.link}" target="_blank" rel="noopener noreferrer" onclick="markPostDone('${post.id}')" class="ml-2 text-[10px] bg-[#F9F6F0] hover:bg-[#7C9DAB] hover:text-white text-[#82808F] p-1.5 rounded-lg border border-cardborder transition flex items-center justify-center shrink-0 shadow-sm active:scale-90" title="Open Post">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            </a>
-                        </div>
-                    `;
-                }).join('');
-            };
-
-            renderList('brand', true);
-            renderList('gucci_official', true);
-            renderList('media_onlypp', true);
-            renderList('ppent_posts', true);
-            renderList('media_bkpp', true);
-            renderList('tiktok_posts', false);
-            renderList('x_posts', false);
-        }
-
-        function getCompletedPosts() {
-            try {
-                return JSON.parse(localStorage.getItem('completed_posts') || '[]');
-            } catch (e) {
-                return [];
-            }
-        }
-
-        function markPostDone(postId) {
-            let completed = getCompletedPosts();
-            if (!completed.includes(postId)) {
-                completed.push(postId);
-                localStorage.setItem('completed_posts', JSON.stringify(completed));
-                setTimeout(() => {
-                    renderPosts();
-                    updateProgress();
-                }, 300);
-            }
-        }
-
-        function resetProgress() {
-            if (confirm("确定要重置打卡进度吗？(Reset your progress?)")) {
-                localStorage.removeItem('completed_posts');
-                renderPosts();
-                updateProgress();
-            }
-        }
-
-        function updateProgress() {
-            const completed = getCompletedPosts();
-            const total = postsData.brand.length + postsData.gucci_official.length + postsData.media_onlypp.length + postsData.ppent_posts.length + postsData.media_bkpp.length + postsData.x_posts.length + postsData.tiktok_posts.length;
-            const el = document.getElementById('progress-text');
-            if (el) {
-                el.innerText = completed.length + " / " + total;
-            }
-        }
-
-        function toggleCaptionWidget() {
-            const widget = document.getElementById('caption-widget');
-            const restoreBtn = document.getElementById('restore-caption-btn');
-            if (widget && restoreBtn) {
-                const isHidden = widget.classList.contains('hidden');
-                if (isHidden) {
-                    widget.classList.remove('hidden');
-                    restoreBtn.classList.add('hidden');
-                } else {
-                    widget.classList.add('hidden');
-                    restoreBtn.classList.remove('hidden');
-                }
-            }
-        }
-
-        function switchPlatform(platform) {
-            currentPlatform = platform;
-            const tabIGTT = document.getElementById('tab-igtt');
-            const tabX = document.getElementById('tab-x');
-            const hashtagCheckbox = document.getElementById('hashtag-toggle');
-            if (!tabIGTT || !tabX) return;
-            
-            if (platform === 'IGTT') {
-                tabIGTT.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
-                tabX.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
-                if (hashtagCheckbox) hashtagCheckbox.checked = false;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done, function () { legacyCopy(text, done); });
             } else {
-                tabX.className = "flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1";
-                tabIGTT.className = "flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1";
-                if (hashtagCheckbox) hashtagCheckbox.checked = true;
+                legacyCopy(text, done);
             }
+        }
+
+        function legacyCopy(text, done) {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); done(); } catch (e) {}
+            document.body.removeChild(ta);
+        }
+
+        var toastTimer = null;
+        function showToast() {
+            var toast = $('#toast');
+            if (!toast) return;
+            toast.classList.remove('hidden');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(function () { toast.classList.add('hidden'); }, 2200);
+        }
+
+        /* ================= 平台切换 ================= */
+        function switchPlatform(platform) {
+            var tabIGTT = $('#tab-igtt'), tabX = $('#tab-x'), hashtagCheckbox = $('#hashtag-toggle');
+            if (!tabIGTT || !tabX) return;
+            var activeCls = 'flex-1 py-1.5 text-xs bg-[#7C9DAB] font-bold rounded-xl text-white transition shadow-sm flex items-center justify-center gap-1';
+            var idleCls   = 'flex-1 py-1.5 text-xs text-[#82808F] font-bold rounded-xl hover:text-[#3A3845] transition flex items-center justify-center gap-1';
+
+            var isIGTT = platform !== 'X';
+            tabIGTT.className = isIGTT ? activeCls : idleCls;
+            tabX.className    = isIGTT ? idleCls : activeCls;
+            tabIGTT.setAttribute('aria-selected', isIGTT);
+            tabX.setAttribute('aria-selected', !isIGTT);
+
+            if (hashtagCheckbox) {
+                hashtagCheckbox.checked = !isIGTT; // X 平台默认带 hashtag
+                store.set(STORAGE.hashtag, hashtagCheckbox.checked);
+            }
+            store.set(STORAGE.platform, platform);
             generateRandomCaption();
         }
+
+        /* ================= 悬浮窗开关 ================= */
+        function applyWidgetVisibility(hidden) {
+            var widget = $('#caption-widget'), btn = $('#restore-caption-btn');
+            if (!widget || !btn) return;
+            widget.classList.toggle('hidden', hidden);
+            btn.classList.toggle('hidden', !hidden);
+        }
+        function toggleCaptionWidget() {
+            var widget = $('#caption-widget');
+            if (!widget) return;
+            var hidden = !widget.classList.contains('hidden');
+            store.set(STORAGE.widgetHidden, hidden);
+            applyWidgetVisibility(hidden);
+        }
+
+        /* ================= 初始化 ================= */
+        function init() {
+            renderPosts();
+            updateProgress();
+
+            // 帖子容器事件委托 (代替内联 onclick)
+            document.addEventListener('click', onPostsClick);
+
+            // 按钮绑定
+            $('#reset-btn').addEventListener('click', resetProgress);
+            $('#random-btn').addEventListener('click', generateRandomCaption);
+            $('#copy-btn').addEventListener('click', copyCaption);
+            $('#close-widget-btn').addEventListener('click', toggleCaptionWidget);
+            $('#restore-caption-btn').addEventListener('click', toggleCaptionWidget);
+            $('#hashtag-toggle').addEventListener('change', function () {
+                store.set(STORAGE.hashtag, this.checked);
+                updateCaptionDisplay();
+            });
+
+            // 平台 tab 事件委托
+            var tabContainer = $('#tab-igtt').parentElement;
+            tabContainer.addEventListener('click', function (e) {
+                var tab = e.target.closest('button[data-platform]');
+                if (tab) switchPlatform(tab.dataset.platform);
+            });
+
+            // 恢复用户偏好
+            var savedPlatform = store.get(STORAGE.platform, 'IGTT');
+            var savedHashtag = store.get(STORAGE.hashtag, null);
+            var isMobile = window.matchMedia('(max-width: 640px)').matches;
+            var savedHidden = store.get(STORAGE.widgetHidden, isMobile); // 小屏默认收起, 避免遮挡内容
+
+            switchPlatform(savedPlatform);
+            if (savedHashtag !== null) {
+                var cb = $('#hashtag-toggle');
+                if (cb) { cb.checked = savedHashtag; updateCaptionDisplay(); }
+            }
+            applyWidgetVisibility(savedHidden);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    })();
     </script>
 </body>
 </html>
