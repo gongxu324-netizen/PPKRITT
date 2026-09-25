@@ -137,7 +137,7 @@
                     <path d="M20 34 V 22" stroke="#7C9DAB" stroke-width="3" stroke-linecap="round"/>
                     <path d="M20 28 C 12 26, 10 32, 12 34" stroke="#7C9DAB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                     <path d="M20 26 C 28 24, 30 30, 28 32" stroke="#7C9DAB" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                    <path d="M12 14 C 12 22, 20 24, 20 24 C 20 24, 28 22, 28 14 C 28 10, 24 8, 20 12 C 16 8, 12 10, 12 14 Z" fill="#E8A0BF" stroke="#3A3845" stroke-width="2"/>
+                    <path d="M12 14 C 12 22, 20 24, 20 24 C 20 24, 28 22, 28 14 C 28 10, 24 8, 12 10, 12 14 Z" fill="#E8A0BF" stroke="#3A3845" stroke-width="2"/>
                 </svg>
             </div>
             <div>
@@ -243,6 +243,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="brand-posts"></div>
         </section>
 
+        <!-- GUCCI OFFICIAL Section -->
+        <section class="space-y-2">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#F7E398] inline-block animate-pulse-slow"></span> 
+                    <span>GUCCI OFFICIAL</span>
+                </h3>
+                <span class="text-[10px] text-[#82808F]">👜 Luxury Brand</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="gucci_official-posts"></div>
+        </section>
+
         <!-- Cute Dashed Divider with Heart -->
         <div class="flex items-center justify-center my-3 gap-2">
             <div class="h-0.5 flex-1 border-b-2 border-dashed border-[#EAE5D9]"></div>
@@ -262,6 +274,18 @@
                 <span class="text-[10px] text-[#82808F]">🎀 High Priority</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="media_onlypp-posts"></div>
+        </section>
+
+        <!-- PPENT Section -->
+        <section class="space-y-2">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#A084CA] inline-block animate-pulse-slow"></span> 
+                    <span>PPENT</span>
+                </h3>
+                <span class="text-[10px] text-[#82808F]">🏢 Official Entertainment</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="ppent_posts-posts"></div>
         </section>
 
         <!-- Media & KOL (BKPP) Section -->
@@ -383,9 +407,12 @@
     </button>
 
     <script>
-        // 原始媒体数据列表
-        const rawMediaPosts = [
-            { id: "m050", name: "PPENT（new✨）", link: "https://www.instagram.com/reel/DdquzN1BaUR/?stkn=bjNwaXl3dTJ1NjJx" },
+        // 原始所有平台的帖子汇总数组
+        const allRawPosts = [
+            // Instagram / Media Posts
+            { id: "m050", name: "ig_PPENT", link: "https://www.instagram.com/reel/DdquzN1BaUR/?stkn=bjNwaXl3dTJ1NjJx" },
+            { id: "m055", name: "ig_PPENT", link: "https://www.instagram.com/p/DdqPRNfn1tb/?stkn=ejMwNXlpNGk1bHQx" },
+            { id: "m056", name: "ig_PPENT", link: "https://www.instagram.com/p/DdlzWBNnz8I/?stkn=dG5vOGhrenRsNDh5" },
             { id: "m051", name: "mint", link: "https://www.instagram.com/reel/DdrWg4jERNG/?stkn=emxnOHVnbnhpd3Iy" },
             { id: "m052", name: "mint", link: "https://www.instagram.com/p/DdrWJGMGVh5/?stkn=MXRvZTc0YWRkYjVpcg==" },
             { id: "m053", name: "mensfoliomy", link: "https://www.instagram.com/p/DdsNvaDkgXZ/?img_index=1" },
@@ -420,13 +447,112 @@
             { id: "m020", name: "esquirethai（BKPP）", link: "https://www.instagram.com/p/DdnSyPkk9H8/?img_index=1" },
             { id: "m021", name: "luxematters.th（BKPP）", link: "https://www.instagram.com/p/DdnSyK-E2MZ/?img_index=1" },
             { id: "m022", name: "emporium_emquartier", link: "https://www.instagram.com/p/DdndK7PI88D/?img_index=1" },
-            { id: "m023", name: "kullastreemag（BKPP）", link: "https://www.instagram.com/p/DdnkGnrCVcX/?img_index=1" }
+            { id: "m023", name: "kullastreemag（BKPP）", link: "https://www.instagram.com/p/DdnkGnrCVcX/?img_index=1" },
+
+            // TikTok Posts
+            { id: "tk001", name: "pp ent", link: "https://vt.tiktok.com/ZSbevor7a/" },
+            { id: "tk004", name: "bazzarth", link: "https://vt.tiktok.com/ZSb85DpRT/" },
+            { id: "tk005", name: "Ellethailand", link: "https://vt.tiktok.com/ZSb85Hqy7/" },
+            { id: "tk002", name: "WWDth", link: "https://vt.tiktok.com/ZSbdDuugC/" },
+            { id: "tk003", name: "vogueth", link: "https://vt.tiktok.com/ZSbdUNbQB/" },
+            { id: "tk1", name: "PP Krit x GUCCI TikTok", link: "https://vt.tiktok.com/ZSqKmbs8Y/" },
+
+            // X (Twitter) Posts
+            { id: "x000", name: "GUCCI-OFFICIAL", link: "https://x.com/gucci/status/2102413529479536691?s=46" },
+            { id: "x047", name: "ellethailand", link: "https://x.com/ellethailand/status/2103169356599636444?s=46" },
+            { id: "x048", name: "bazaarthailand", link: "https://x.com/bazaarthailand/status/2103163805618585914?s=46" },
+            { id: "x049", name: "wwdthailand", link: "https://x.com/wwdthailand/status/2103018345880830294?s=46" },
+            { id: "x050", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103154463200743769?s=46" },
+            { id: "x051", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103154630108803323?s=46" },
+            { id: "x052", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103154247760290136?s=46" }, 
+            { id: "x053", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103154366316413060?s=46" },
+            { id: "x054", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103154552174530589?s=46" },              
+            { id: "x055", name: "mint", link: "https://x.com/mintmag_th/status/2103165339010036092?s=46" },
+            { id: "x056", name: "mint", link: "https://x.com/mintmag_th/status/2103163596381573523?s=46" },
+            { id: "x047_m", name: "mint", link: "https://x.com/mintmag_th/status/2103163550420389918?s=46" },
+            { id: "x058", name: "mint", link: "https://x.com/mintmag_th/status/2103160482538676282?s=46" },
+            { id: "x059", name: "praewdaily", link: "https://x.com/praewdaily/status/2103002819842429340?s=46" },
+            { id: "x060", name: "allnews_th", link: "https://x.com/allnews_th/status/2103125771032395954?s=46" },
+            { id: "x061", name: "viraltakes", link: "https://x.com/viraltakes/status/2103178177032151428?s=46" },
+            { id: "x062", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2103092636764737783?s=46" },
+            { id: "x063", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2103175831875146184?s=46" },
+            { id: "x064", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2103175251580563900?s=46" },
+            { id: "x044", name: "GUCCI JAPAN", link: "https://x.com/gucci_jp/status/2103024133525168327?s=46" }, 
+            { id: "x045", name: "GUCCI JAPAN", link: "https://x.com/gucci_jp/status/2103046799367848436?s=46" }, 
+            { id: "x042", name: "GUCCI JAPAN", link: "https://x.com/gucci_jp/status/2103016586802274454?s=46" }, 
+            { id: "x046", name: "viraltakes", link: "https://x.com/viraltakes/status/2103046341631017004?s=46" }, 
+            { id: "x028", name: "X_PPENT", link: "https://x.com/PPKrit_Ent/status/2103007539193606263" },
+            { id: "x038", name: "X_PPENT", link: "https://x.com/PPKrit_Ent/status/2103007502975820143" },
+            { id: "x036", name: "X_PPENT", link: "https://x.com/PPKrit_Ent/status/2103007421035942054" },
+            { id: "x039", name: "X_PPENT", link: "https://x.com/PPKrit_Ent/status/2103007350596735416" },
+            { id: "x035", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2102883208954310996?s=46" },
+            { id: "x040", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103007350596735416?s=46" },
+            { id: "x041", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2103007502975820143?s=46" },
+            { id: "x043", name: "esquire_th（NEW）", link: "https://x.com/esquire_th/status/2103012598581207441?s=46" },
+            { id: "x033", name: "bazaarthailand（onlypp）", link: "https://x.com/bazaarthailand/status/2103010497021071469?s=46" },
+            { id: "x031", name: "ellethailand（onlypp）", link: "https://x.com/ellethailand/status/2103000037487993139?s=46" },
+            { id: "x034", name: "ellethailand（onlypp）", link: "https://x.com/ellementhailand/status/2103004774736244836?s=46" }, 
+            { id: "x032", name: "ELLEMENThailand（onlypp）", link: "https://x.com/ellementhailand/status/2103004898925375778?s=46" },
+            { id: "x037", name: "MensFolioTH（NEW）", link: "https://x.com/mensfolioth/status/2103010133009895710?s=46" },
+            { id: "x027", name: "VOGUE THAILAND", link: "https://x.com/voguethailand/status/2102945716566155697?s=46" },
+            { id: "x020", name: "voguethailand", link: "https://x.com/voguethailand/status/2102589782769668116?s=46" },
+            { id: "x021", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102589752532689108?s=46" },
+            { id: "x029", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102956314947436948?s=46" },
+            { id: "x030", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102956329153573042?s=46" },
+            { id: "x032_bkpp", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102980965136289928?s=46" },
+            { id: "x017", name: "bazaarthailand", link: "https://x.com/bazaarthailand/status/2102589158766379032?s=46" },
+            { id: "x018", name: "esquire_th", link: "https://x.com/esquire_th/status/2102600609333756121?s=46" },
+            { id: "x019", name: "MensFolioTH", link: "https://x.com/mensfolioth/status/2102595487627121009?s=46" },
+            { id: "x022", name: "th_hashtag（BKPP）", link: "https://x.com/th_hashtag/status/2102588656506785793?s=46" },               
+            { id: "x023", name: "mintmag_th", link: "https://x.com/mintmag_th/status/2102589050997944584?s=46" },
+            { id: "x033_mint", name: "mintmag_th", link: "https://x.com/mintmag_th/status/2103001954465276081?s=46" },
+            { id: "x034_mint", name: "mintmag_th", link: "https://x.com/mintmag_th/status/2103001339097936367?s=46" },
+            { id: "x035_gw", name: "gangwayth", link: "https://x.com/gangwayth/status/2103003012361052589?s=46" },
+            { id: "x024", name: "howemagazine_th（BKPP）", link: "https://x.com/howemagazine_th/status/2102609937906217095?s=46" },
+            { id: "x025", name: "girlngloss（BKPP）", link: "https://x.com/girlngloss/status/2102624153061007848?s=46" },
+            { id: "x026", name: "iconsiam（BKPP）", link: "https://x.com/iconsiam/status/2102638949231632587?s=46" },
+            { id: "x001", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2102383667868016898?s=46" },
+            { id: "x002", name: "X_PPENT ", link: "https://x.com/ppkrit_ent/status/2102383721496375539?s=46" },
+            { id: "x003", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2102383766438367376?s=46" },
+            { id: "x004", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2102383827708756147?s=46" },
+            { id: "x005", name: "X_PPENT ", link: "https://x.com/ppkrit_ent/status/2102383863414890973?s=46" },
+            { id: "x006", name: "X_PPENT", link: "https://x.com/ppkrit_ent/status/2102383902912655788?s=46" },
+            { id: "x007", name: "X_PPENT ", link: "https://x.com/ppkrit_ent/status/2102383940581614076?s=46" },
+            { id: "x008", name: "daradaily", link: "https://x.com/daradaily/status/2102388877369729139?s=46" },
+            { id: "x008_2", name: "tpoptjai", link: "https://x.com/tpoptjai_/status/2102386937613234583?s=46" },
+            { id: "x009", name: "hello_asian", link: "https://x.com/hello_asian/status/2102418106232774968?s=46" },
+            { id: "x010", name: "eleva_official", link: "https://x.com/eleva_official/status/2102434613239181751?s=46" },
+            { id: "x011", name: "noppewth", link: "https://x.com/noppewth/status/2102440263390237030?s=46" },
+            { id: "x012", name: "popconth", link: "https://x.com/popconth/status/2102440730447016263?s=46" },
+            { id: "x013", name: "viraltakes", link: "https://x.com/viraltakes/status/2102442887220965868?s=46" },
+            { id: "x014", name: "pangmak2026", link: "https://x.com/pangmak2026/status/2102439967230488722?s=46" },
+            { id: "x015", name: "otpcnews", link: "https://x.com/otpcnews/status/2102522075063705616?s=46" },
+            { id: "x016", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2102435416049934373?s=46" }
         ];
 
-        // 精确分类函数：只有 name 字段包含 "BKPP" 时才分至 media_bkpp
+        // 基础过滤条件
+        const filterGucci = (item) => item.name && item.name.toUpperCase().includes("GUCCI");
+        const filterPpent = (item) => item.name && item.name.toUpperCase().includes("PPENT");
         const filterBkpp = (item) => item.name && item.name.toUpperCase().includes("BKPP");
 
-        // 1. 数据源
+        // 平台的优先级排序算法（instagram > tiktok > x > other）
+        const getPlatformPriority = (link) => {
+            const l = link.toLowerCase();
+            if (l.includes("instagram.com")) return 1;
+            if (l.includes("tiktok.com")) return 2;
+            if (l.includes("x.com") || l.includes("twitter.com")) return 3;
+            return 4;
+        };
+
+        const sortByPriority = (arr) => {
+            return arr.slice().sort((a, b) => getPlatformPriority(a.link) - getPlatformPriority(b.link));
+        };
+
+        // 动态构建按照逻辑分类且按平台优先级排好的 postsData
+        const gucciPosts = sortByPriority(allRawPosts.filter(item => filterGucci(item)));
+        const ppentPosts = sortByPriority(allRawPosts.filter(item => filterPpent(item) && !filterGucci(item)));
+        const remainingPosts = allRawPosts.filter(item => !filterGucci(item) && !filterPpent(item));
+
         const postsData = {
             brand: [
                 { id: "pp004", name: "🐼 （NEW）", link: "https://www.instagram.com/pp.kritt/p/DdrNnn7AQXp/", likes: "177k", comments: "7336" },
@@ -434,94 +560,18 @@
                 { id: "pp002", name: "🚃（NEW）", link: "https://www.instagram.com/p/DdpUE08ysFK/", likes: "280k", comments: "14k" },        
                 { id: "pp001", name: "Ciao 🙂‍↔️", link: "https://www.instagram.com/pp.kritt/p/Ddly5Nlgdz9/", likes: "343k", comments: "25k" }           
             ],
-            media_onlypp: rawMediaPosts.filter(item => !filterBkpp(item)),
-            media_bkpp: rawMediaPosts.filter(item => filterBkpp(item)),
-            tiktok_posts: [
-                { id: "tk001", name: "pp ent", link: "https://vt.tiktok.com/ZSbevor7a/" },
-                { id: "tk004", name: "bazzarth", link: "https://vt.tiktok.com/ZSb85DpRT/" },
-                { id: "tk005", name: "Ellethailand", link: "https://vt.tiktok.com/ZSb85Hqy7/" },
-                { id: "tk002", name: "WWDth", link: "https://vt.tiktok.com/ZSbdDuugC/" },
-                { id: "tk003", name: "vogueth", link: "https://vt.tiktok.com/ZSbdUNbQB/" },
-                { id: "tk1", name: "PP Krit x GUCCI TikTok", link: "https://vt.tiktok.com/ZSqKmbs8Y/" }
-            ],
-            x_posts: [
-                { id: "x000", name: "GUCCI-OFFICIAL", link: "https://x.com/gucci/status/2102413529479536691?s=46" },
-                { id: "x047", name: "ellethailand", link: "https://x.com/ellethailand/status/2103169356599636444?s=46" },
-                { id: "x048", name: "bazaarthailand", link: "https://x.com/bazaarthailand/status/2103163805618585914?s=46" },
-                { id: "x049", name: "wwdthailand", link: "https://x.com/wwdthailand/status/2103018345880830294?s=46" },
-                { id: "x050", name: "PPENT", link: "https://x.com/ppkrit_ent/status/2103154463200743769?s=46" },
-                { id: "x051", name: "PPENT", link: "https://x.com/ppkrit_ent/status/2103154630108803323?s=46" },
-                { id: "x052", name: "PPENT", link: "https://x.com/ppkrit_ent/status/2103154247760290136?s=46" }, 
-                { id: "x053", name: "PPENT", link: "https://x.com/ppkrit_ent/status/2103154366316413060?s=46" },
-                { id: "x054", name: "PPENT", link: "https://x.com/ppkrit_ent/status/2103154552174530589?s=46" },              
-                { id: "x055", name: "mint", link: "https://x.com/mintmag_th/status/2103165339010036092?s=46" },
-                { id: "x056", name: "mint", link: "https://x.com/mintmag_th/status/2103163596381573523?s=46" },
-                { id: "x047", name: "mint", link: "https://x.com/mintmag_th/status/2103163550420389918?s=46" },
-                { id: "x058", name: "mint", link: "https://x.com/mintmag_th/status/2103160482538676282?s=46" },
-                { id: "x059", name: "praewdaily", link: "https://x.com/praewdaily/status/2103002819842429340?s=46" },
-                { id: "x060", name: "allnews_th", link: "https://x.com/allnews_th/status/2103125771032395954?s=46" },
-                { id: "x061", name: "viraltakes", link: "https://x.com/viraltakes/status/2103178177032151428?s=46" },
-                { id: "x062", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2103092636764737783?s=46" },
-                { id: "x063", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2103175831875146184?s=46" },
-                { id: "x064", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2103175251580563900?s=46" },
-                { id: "x044", name: "GUCCI JAPAN（NEW）", link: "https://x.com/gucci_jp/status/2103024133525168327?s=46" }, 
-                { id: "x045", name: "GUCCI JAPAN（NEW）", link: "https://x.com/gucci_jp/status/2103046799367848436?s=46" }, 
-                { id: "x042", name: "GUCCI JAPAN（NEW）", link: "https://x.com/gucci_jp/status/2103016586802274454?s=46" }, 
-                { id: "x046", name: "viraltakes（NEW）", link: "https://x.com/viraltakes/status/2103046341631017004?s=46" }, 
-                { id: "x028", name: "PPENT（NEW）", link: "https://x.com/PPKrit_Ent/status/2103007539193606263" },
-                { id: "x038", name: "PPENT（NEW）", link: "https://x.com/PPKrit_Ent/status/2103007502975820143" },
-                { id: "x036", name: "PPENT（NEW）", link: "https://x.com/PPKrit_Ent/status/2103007421035942054" },
-                { id: "x039", name: "PPENT（NEW）", link: "https://x.com/PPKrit_Ent/status/2103007350596735416" },
-                { id: "x035", name: "PPENT（NEW）", link: "https://x.com/ppkrit_ent/status/2102883208954310996?s=46" },
-                { id: "x040", name: "PPENT（NEW）", link: "https://x.com/ppkrit_ent/status/2103007350596735416?s=46" },
-                { id: "x041", name: "PPENT（NEW）", link: "https://x.com/ppkrit_ent/status/2103007502975820143?s=46" },
-                { id: "x043", name: "esquire_th（NEW）", link: "https://x.com/esquire_th/status/2103012598581207441?s=46" },
-                { id: "x033", name: "bazaarthailand（onlypp）", link: "https://x.com/bazaarthailand/status/2103010497021071469?s=46" },
-                { id: "x031", name: "ellethailand（onlypp）", link: "https://x.com/ellethailand/status/2103000037487993139?s=46" },
-                { id: "x034", name: "ellethailand（onlypp）", link: "https://x.com/ellementhailand/status/2103004774736244836?s=46" }, 
-                { id: "x032", name: "ELLEMENThailand（onlypp）", link: "https://x.com/ellementhailand/status/2103004898925375778?s=46" },
-                { id: "x037", name: "MensFolioTH（NEW）", link: "https://x.com/mensfolioth/status/2103010133009895710?s=46" },
-                { id: "x027", name: "VOGUE THAILAND", link: "https://x.com/voguethailand/status/2102945716566155697?s=46" },
-                { id: "x020", name: "voguethailand", link: "https://x.com/voguethailand/status/2102589782769668116?s=46" },
-                { id: "x021", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102589752532689108?s=46" },
-                { id: "x029", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102956314947436948?s=46" },
-                { id: "x030", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102956329153573042?s=46" },
-                { id: "x032_bkpp", name: "voguethailand（BKPP）", link: "https://x.com/voguethailand/status/2102980965136289928?s=46" },
-                { id: "x017", name: "bazaarthailand", link: "https://x.com/bazaarthailand/status/2102589158766379032?s=46" },
-                { id: "x018", name: "esquire_th", link: "https://x.com/esquire_th/status/2102600609333756121?s=46" },
-                { id: "x019", name: "MensFolioTH", link: "https://x.com/mensfolioth/status/2102595487627121009?s=46" },
-                { id: "x022", name: "th_hashtag（BKPP）", link: "https://x.com/th_hashtag/status/2102588656506785793?s=46" },               
-                { id: "x023", name: "mintmag_th", link: "https://x.com/mintmag_th/status/2102589050997944584?s=46" },
-                { id: "x033_mint", name: "mintmag_th", link: "https://x.com/mintmag_th/status/2103001954465276081?s=46" },
-                { id: "x034_mint", name: "mintmag_th", link: "https://x.com/mintmag_th/status/2103001339097936367?s=46" },
-                { id: "x035_gw", name: "gangwayth", link: "https://x.com/gangwayth/status/2103003012361052589?s=46" },
-                { id: "x024", name: "howemagazine_th（BKPP）", link: "https://x.com/howemagazine_th/status/2102609937906217095?s=46" },
-                { id: "x025", name: "girlngloss（BKPP）", link: "https://x.com/girlngloss/status/2102624153061007848?s=46" },
-                { id: "x026", name: "iconsiam（BKPP）", link: "https://x.com/iconsiam/status/2102638949231632587?s=46" },
-                { id: "x001", name: "PPENT POST1", link: "https://x.com/ppkrit_ent/status/2102383667868016898?s=46" },
-                { id: "x002", name: "PPENT POST2", link: "https://x.com/ppkrit_ent/status/2102383721496375539?s=46" },
-                { id: "x003", name: "PPENT POST3", link: "https://x.com/ppkrit_ent/status/2102383766438367376?s=46" },
-                { id: "x004", name: "PPENT POST4", link: "https://x.com/ppkrit_ent/status/2102383827708756147?s=46" },
-                { id: "x005", name: "PPENT POST5", link: "https://x.com/ppkrit_ent/status/2102383863414890973?s=46" },
-                { id: "x006", name: "PPENT POST6", link: "https://x.com/ppkrit_ent/status/2102383902912655788?s=46" },
-                { id: "x007", name: "PPENT POST7", link: "https://x.com/ppkrit_ent/status/2102383940581614076?s=46" },
-                { id: "x008", name: "daradaily", link: "https://x.com/daradaily/status/2102388877369729139?s=46" },
-                { id: "x008_2", name: "tpoptjai", link: "https://x.com/tpoptjai_/status/2102386937613234583?s=46" },
-                { id: "x009", name: "hello_asian", link: "https://x.com/hello_asian/status/2102418106232774968?s=46" },
-                { id: "x010", name: "eleva_official", link: "https://x.com/eleva_official/status/2102434613239181751?s=46" },
-                { id: "x011", name: "noppewth", link: "https://x.com/noppewth/status/2102440263390237030?s=46" },
-                { id: "x012", name: "popconth", link: "https://x.com/popconth/status/2102440730447016263?s=46" },
-                { id: "x013", name: "viraltakes", link: "https://x.com/viraltakes/status/2102442887220965868?s=46" },
-                { id: "x014", name: "pangmak2026", link: "https://x.com/pangmak2026/status/2102439967230488722?s=46" },
-                { id: "x015", name: "otpcnews", link: "https://x.com/otpcnews/status/2102522075063705616?s=46" },
-                { id: "x016", name: "oneilymusic", link: "https://x.com/oneilymusic/status/2102435416049934373?s=46" }
-            ]
+            gucci_official: gucciPosts,
+            ppent_posts: ppentPosts,
+            media_onlypp: sortByPriority(remainingPosts.filter(item => !filterBkpp(item) && getPlatformPriority(item.link) === 1)),
+            media_bkpp: sortByPriority(remainingPosts.filter(item => filterBkpp(item) && getPlatformPriority(item.link) === 1)),
+            tiktok_posts: sortByPriority(remainingPosts.filter(item => getPlatformPriority(item.link) === 2)),
+            x_posts: sortByPriority(remainingPosts.filter(item => getPlatformPriority(item.link) === 3))
         };
 
-        // 2. Hashtags 库
+        // Hashtags 库
         const targetHashtags = "#PPKRITxGUCCIMFW26 #GUCCISS27xPPKRIT #GucciTheStoreShow #Gucci #PPKritt #MFW @gucci @ppkritt";
         
-        // 3. 评论语料库
+        // 评论语料库
         const captionTemplates = {
             shorts: [
                 "PPKRIT x GUCCI is pure magic! ✨",
@@ -660,7 +710,7 @@
             }
         }
 
-        // 全量渲染列表（无翻页）
+        // 渲染页面数据列表
         function renderPosts() {
             const completed = getCompletedPosts();
             
@@ -668,6 +718,11 @@
                 const data = postsData[key] || [];
                 const container = document.getElementById(`${key}-posts`);
                 if (!container) return;
+
+                if (data.length === 0) {
+                    container.innerHTML = `<p class="text-xs text-subtext col-span-2 py-2 italic text-center">暂无内容 (No posts available)</p>`;
+                    return;
+                }
 
                 container.innerHTML = data.map(post => {
                     const isDone = completed.includes(post.id);
@@ -699,7 +754,9 @@
             };
 
             renderList('brand', true);
+            renderList('gucci_official', true);
             renderList('media_onlypp', true);
+            renderList('ppent_posts', true);
             renderList('media_bkpp', true);
             renderList('tiktok_posts', false);
             renderList('x_posts', false);
@@ -735,7 +792,7 @@
 
         function updateProgress() {
             const completed = getCompletedPosts();
-            const total = postsData.brand.length + postsData.media_onlypp.length + postsData.media_bkpp.length + postsData.x_posts.length + postsData.tiktok_posts.length;
+            const total = postsData.brand.length + postsData.gucci_official.length + postsData.media_onlypp.length + postsData.ppent_posts.length + postsData.media_bkpp.length + postsData.x_posts.length + postsData.tiktok_posts.length;
             const el = document.getElementById('progress-text');
             if (el) {
                 el.innerText = completed.length + " / " + total;
