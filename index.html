@@ -84,6 +84,7 @@
         }
     </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body class="min-h-screen p-3 sm:p-6 relative pb-28 bg-cream overflow-x-hidden selection:bg-softpink/30">
 
@@ -238,6 +239,18 @@
                 <span class="text-[10px] text-[#82808F]">🍓 Official Channel</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="brand-posts"></div>
+        </section>
+
+                <!-- ON THE SHOW (MEDIA) Section -->
+        <section class="space-y-2" data-section="on_the_show">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xs font-bold text-[#3A3845] uppercase tracking-wider flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-full border border-cardborder shadow-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#7C9DAB] inline-block animate-pulse-slow"></span>
+                    <span>ON THE SHOW(MEDIA)</span>
+                </h3>
+                <span class="text-[10px] text-[#82808F]">🎬 Show Coverage</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="on_the_show-posts"></div>
         </section>
 
         <!-- GUCCI OFFICIAL Section -->
@@ -433,6 +446,24 @@
         /* ================= 数据 ================= */
         var allRawPosts = [
             // Instagram / Media Posts
+            { id: "s001", name: "On The Show", link: "https://www.instagram.com/reel/DdtadMcMjy3/?stkn=MXUzYndnc2xqejNzag==" },
+            { id: "s002", name: "On The Show", link: "https://www.instagram.com/reel/Ddtb4UkzRrI/?stkn=MTk5Z3g4bGVibmQxaw==" },
+            { id: "s003", name: "On The Show", link: "https://www.instagram.com/reel/DdtcbVaJV80/?stkn=MTV2MTd1NW9uM2Rwcg==" },
+            { id: "s004", name: "On The Show", link: "https://www.instagram.com/reel/DdtbLBwPvui/?stkn=aXV5dWZwY2ljNnFl" },
+            { id: "s005", name: "On The Show", link: "https://www.instagram.com/reel/DdtdL7luwSy/?stkn=MTVzenNncTl5YWM0cA==" },
+            { id: "s006", name: "On The Show", link: "https://www.instagram.com/reel/DdtdLd9hKEo/?stkn=MTBsY3hweWlkbTE5eg==" },
+            { id: "s007", name: "On The Show", link: "https://www.instagram.com/reel/DdtYn67zcg7/?stkn=MWc0cjA5eTY0OWVhdw==" },
+            { id: "s008", name: "On The Show", link: "https://www.instagram.com/reel/DdtYcCThYIb/?stkn=b3ZkdHhyODJ6MHo0" },
+            { id: "s009", name: "On The Show", link: "https://instagram.com/p/DdtYV7TNF04/" },
+            { id: "s010", name: "On The Show", link: "https://instagram.com/p/DdtZ7ZSTDQ1/" },
+            { id: "s011", name: "On The Show", link: "https://www.instagram.com/p/DdtXp-hE9Bk/?stkn=MTVwdzRvYTlteWlndQ==" },
+            { id: "s012", name: "On The Show", link: "https://www.instagram.com/p/DdtTcV-k6TB/?stkn=MWJtY2VuNWI5d3dnbQ==" },
+            { id: "s013", name: "On The Show", link: "https://www.instagram.com/reel/DdtakMNzWFY/?stkn=MWhqeGZ2ODYzNXlxcg==" },
+            { id: "s014", name: "On The Show", link: "https://www.instagram.com/p/DdtPg9Ojfw3/?stkn=N2oydmk2Mm9hZ3B0" },
+            { id: "s015", name: "On The Show", link: "https://www.instagram.com/reel/DdtarDvNbXQ/?stkn=MmJsZmgydXA3NHZ5" },
+            { id: "s016", name: "On The Show", link: "https://www.instagram.com/reel/Ddtc3LhInJH/?stkn=M2F5a2pobHZ4cWc=" },
+            { id: "s017", name: "On The Show", link: "https://www.instagram.com/reel/DdtetxePaJB/?stkn=MXVsNDZwZDViMzd6bw==" },
+            { id: "s018", name: "On The Show", link: "https://www.instagram.com/reel/DdteLC0zjU1/?stkn=MW55YWVtNmdueDNzbw==" },
             { id: "m050", name: "ig_PPENT", link: "https://www.instagram.com/reel/DdquzN1BaUR/?stkn=bjNwaXl3dTJ1NjJx" },
             { id: "m055", name: "ig_PPENT", link: "https://www.instagram.com/p/DdqPRNfn1tb/?stkn=ejMwNXlpNGk1bHQx" },
             { id: "m056", name: "ig_PPENT", link: "https://www.instagram.com/p/DdlzWBNnz8I/?stkn=dG5vOGhrenRsNDh5" },
@@ -651,6 +682,7 @@
         var remaining    = allRawPosts.filter(function (i) { return !filterGucci(i) && !filterPpent(i); });
 
         var postsData = {
+            on_the_show: sortByPriority(allRawPosts.filter(function (i) { return i.id.indexOf('s') === 0 && i.id.length === 4 && /^\d+$/.test(i.id.slice(1)); })),
             brand: [
                 { id: "pp006", name: "ready for", link: "https://www.instagram.com/p/DdtSOwTAUEu/?stkn=MTl4ODB1MW42cjY3eA%3D%3D" },
                 { id: "pp005", name: "🐦‍⬛", link: "https://www.instagram.com/p/DdssSkQhvcM/", likes: "129k", comments: "10k" },
@@ -667,7 +699,7 @@
             x_posts: sortByPriority(remaining.filter(function (i) { return getPlatformPriority(i.link) === 3; }))
         };
 
-        var SECTION_KEYS = ['brand', 'gucci_official', 'media_onlypp', 'ppent_posts', 'media_bkpp', 'tiktok_posts', 'x_posts'];
+        var SECTION_KEYS = ['on_the_show', 'brand', 'gucci_official', 'media_onlypp', 'ppent_posts', 'media_bkpp', 'tiktok_posts', 'x_posts'];
         var VALID_IDS = {};
         SECTION_KEYS.forEach(function (k) {
             postsData[k].forEach(function (p) { VALID_IDS[p.id] = true; });
